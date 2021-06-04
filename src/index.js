@@ -9,8 +9,7 @@ import {Provider} from 'react-redux'
 import {composeWithDevTools} from 'redux-devtools-extension'
 import songsReducer from './reducers/songsReducer'
 
-const initialState = {songs: []}
-const store = createStore(songsReducer, initialState, compose(applyMiddleware(thunk), composeWithDevTools()))
+const store = createStore(songsReducer, compose(applyMiddleware(thunk), composeWithDevTools()))
 
 ReactDOM.render(
 <Provider store={store}>
