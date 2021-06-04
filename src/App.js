@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
 import React from 'react'
-import Songs from './Songs';
+import SongsContainer from './containers/SongsContainer'
 
 class App extends React.Component {
 
@@ -9,7 +9,9 @@ class App extends React.Component {
     console.log("App render")
     return (
       <div className="App">
-        <Songs />
+        <h4>Music Player</h4>
+        <SongsContainer />
+        {/* <Songs /> */}
       </div>
     );
   }

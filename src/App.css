@@ -15,13 +15,21 @@
 
 .songs-container > * {
   margin: 50px;
-
-
 }
 
-.individ-song img {
-  max-width: 200px;
-  max-height: 200px;
+#BeSweet img {
+  max-width: 150px;
+  max-height: 150px
+}
+
+#InMyRoom img {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+#YaJustNeed2BelieveinYaself img {
+  max-width: 150px;
+  max-height: 150px;
 }
 
 .song-title {
