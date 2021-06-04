@@ -10,12 +10,15 @@ class Songs extends React.Component {
     }
 
     render() {
-
         console.log("songs render")
         return (
             <div className="songs-container">
-                <p>All Songs</p>
-                {this.props.songs.map(song => <div className={song.title}>{song.title} {song.artist} {song.artist_about}</div>)}         
+                <p className="song-title">All Songs</p>
+                {this.props.songs.map(song => <div className="individ-song">
+                    <img src={song.image_link}></img>
+                    <h2>{song.title} </h2>
+                    <h3>{song.artist}</h3>
+                    </div>)}         
             </div>
         )
     }
@@ -25,6 +28,5 @@ function mapStateToProps(state) {
     console.log("mapStateToProps")
     return {songs: state.songs}
 }
-
 
 export default connect(mapStateToProps, {fetchSongs})(Songs)

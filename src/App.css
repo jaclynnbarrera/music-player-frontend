@@ -1,6 +1,6 @@
-.App {
+/* .App {
   text-align: center;
-}
+} */
 
 .App-logo {
   height: 40vmin;
@@ -11,6 +11,22 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.songs-container > * {
+  margin: 50px;
+
+
+}
+
+.individ-song img {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.song-title {
+  font-size: 75px;
+  text-align: center;
 }
 
 .App-header {
