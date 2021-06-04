@@ -13,8 +13,6 @@
   }
 }
 
-
-
 #BeSweet img {
   max-width: 150px;
   max-height: 150px
@@ -30,12 +28,14 @@
   max-height: 150px;
 }
 
-.song-title {
+#headline {
   font-size: 75px;
   text-align: center;
+  margin-top: 10px;
+  margin-top: 10px;
 }
 
-.App-header {
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -48,7 +48,7 @@
 
 .App-link {
   color: #61dafb;
-}
+} */
 
 @keyframes App-logo-spin {
   from {

@@ -2,7 +2,7 @@ import React from 'react'
 import Songs from '../components/Songs'
 import { connect } from 'react-redux'
 import fetchSongs from '../actions/fetchSongs.js'
-
+import { Route } from 'react-router-dom'
 
 class SongsContainer extends React.Component {
 
@@ -13,9 +13,9 @@ class SongsContainer extends React.Component {
     render(){
         console.log("songs container")
         return (
-            <div id="songs-container">
+            <Route exact path="/songs">
                 <Songs songs={this.props.songs} />
-            </div>
+            </Route>
         )
     }
 }
@@ -25,4 +25,4 @@ function mapStateToProps(state) {
     return {songs: state.songs}
 }
 
-export default connect(mapStateToProps, {fetchSongs})(SongsContainer)
+export default connect(mapStateToProps, {fetchSongs})(SongsContainer) 

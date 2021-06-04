@@ -11,7 +11,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <NavBar />
-        <h4>Music Player</h4>
+        <h4 id="headline">RADIO 135</h4>
         <SongsContainer />
         {/* <Songs /> */}
       </div>
