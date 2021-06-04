@@ -2,6 +2,7 @@
 import './App.css';
 import React from 'react'
 import SongsContainer from './containers/SongsContainer'
+import NavBar from './NavBar'
 
 class App extends React.Component {
 
@@ -9,6 +10,7 @@ class App extends React.Component {
     console.log("App render")
     return (
       <div className="App">
+        <NavBar />
         <h4>Music Player</h4>
         <SongsContainer />
         {/* <Songs /> */}

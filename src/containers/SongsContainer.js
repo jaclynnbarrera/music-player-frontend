@@ -1,7 +1,6 @@
 import React from 'react'
 import Songs from '../components/Songs'
 import { connect } from 'react-redux'
-import songsReducer from '../reducers/songsReducer.js'
 import fetchSongs from '../actions/fetchSongs.js'
 
 
@@ -14,9 +13,8 @@ class SongsContainer extends React.Component {
     render(){
         console.log("songs container")
         return (
-            <div>
-                Songs Container
-                <Songs />
+            <div id="songs-container">
+                <Songs songs={this.props.songs} />
             </div>
         )
     }
@@ -27,4 +25,4 @@ function mapStateToProps(state) {
     return {songs: state.songs}
 }
 
-export default connect(mapStateToProps, {fetchSongs})(SongsContainer) 
+export default connect(mapStateToProps, {fetchSongs})(SongsContainer)
