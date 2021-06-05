@@ -14,9 +14,12 @@ class SongsContainer extends React.Component {
     render(){
         console.log("songs container")
         return (
-            <Route exact path="/songs">
+            <>
+                <Route exact path="/songs">
                 <Songs songs={this.props.songs} />
             </Route>
+            <Route path="/songs/:id" render={(routerProps) => <Song songs={this.props.songs}{...routerProps}/>}/>      
+            </>
         )
     }
 }

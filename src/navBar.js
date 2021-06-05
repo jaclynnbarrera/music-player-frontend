@@ -4,7 +4,6 @@ export default function NavBar(props) {
   return (
       <div>
           <Link to="/songs">Songs</Link><br></br>
-          <Link to="/about">About</Link>
       </div>
   )
 }
