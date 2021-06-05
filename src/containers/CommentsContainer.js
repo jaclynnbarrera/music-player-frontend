@@ -1,4 +1,5 @@
 import React from 'react'
+import CommentInput from '../components/CommentInput'
 
 class CommentsContainer extends React.Component {
 
@@ -6,6 +7,7 @@ class CommentsContainer extends React.Component {
         return (
             <div>
                 Commennnntssss container
+                <CommentInput />
             </div>
         )
     }
