@@ -4,7 +4,7 @@ const Comments = (props) => {
     console.log("comments")
     return (
         <div>
-            {props.comments.map(comment => comment.content)}
+            {props.comments && props.comments.map(comment => comment.content)}
         </div>        
     )
 }

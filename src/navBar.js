@@ -8,3 +8,9 @@ export default function NavBar(props) {
       </div>
   )
 }
+
+
+{/* <select>
+  <option>Song</option>
+  <option>About</option>
+</select> */}

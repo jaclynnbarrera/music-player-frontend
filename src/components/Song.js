@@ -11,11 +11,11 @@ const Song = (props) => {
         <div id={song.title.split(" ").join("")}>
             <img 
             src={song.image_link}
+            alt="artist"
             ></img>
             <h2>{song.title}</h2>
             <h3>{song.artist}</h3>
             <p>{song.artist_about}</p>
-            {/* <Comment song={song}/>             */}
             <CommentsContainer song={song}/>
         </div>        
     )
