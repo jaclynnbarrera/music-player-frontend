@@ -1,13 +1,14 @@
 import React from 'react'
 import CommentInput from '../components/CommentInput'
+import Comments from '../components/Comments'
 
 class CommentsContainer extends React.Component {
-
     render() {
+        console.log("comments container")
         return (
             <div>
-                Commennnntssss container
                 <CommentInput />
+                <Comments comments={this.props.song.comments} />
             </div>
         )
     }

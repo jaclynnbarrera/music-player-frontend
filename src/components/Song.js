@@ -16,7 +16,7 @@ const Song = (props) => {
             <h3>{song.artist}</h3>
             <p>{song.artist_about}</p>
             {/* <Comment song={song}/>             */}
-            <CommentsContainer/>
+            <CommentsContainer song={song}/>
         </div>        
     )
 }
