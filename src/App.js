@@ -3,6 +3,7 @@ import './App.css';
 import React from 'react'
 import SongsContainer from './containers/SongsContainer'
 import NavBar from './NavBar'
+import About from './components/About'
 
 class App extends React.Component {
 

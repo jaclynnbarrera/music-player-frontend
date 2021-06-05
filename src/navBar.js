@@ -1,15 +1,10 @@
-// import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
 export default function NavBar(props) {
-  // debugger
   return (
       <div>
-          Nav Bar
+          <Link to="/songs">Songs</Link><br></br>
+          <Link to="/about">About</Link>
       </div>
-    //   <>
-    //       {/* <Link to="/lists">Lists</Link>
-    //       <Link to="/lists/new">New List</Link> */}
-    //   </>
   )
-
 }
