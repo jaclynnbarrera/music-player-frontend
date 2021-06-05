@@ -18,6 +18,11 @@
   max-height: 150px
 }
 
+.BeSweetHover img {
+  max-width: 300px;
+  max-height: 150px;
+}
+
 #InMyRoom img {
   max-width: 150px;
   max-height: 150px;
