@@ -10,7 +10,7 @@ export default function NavBar(props) {
 }
 
 
-{/* <select>
-  <option>Song</option>
-  <option>About</option>
-</select> */}
+// {/* <select>
+//   <option>Song</option>
+//   <option>About</option>
+// </select> */}

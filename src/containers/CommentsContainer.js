@@ -9,7 +9,7 @@ class CommentsContainer extends React.Component {
         return (
             <div>
                 <Comments comments={this.props.song.comments} />
-                <CommentInput song_id={this.props.song} />
+                <CommentInput song_id={this.props.song.id} />
             </div>
         )
     }

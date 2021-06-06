@@ -1,34 +1,39 @@
 import React from 'react'
 import { connect } from 'react-redux'
-
+import addComment from '../actions/addComment'
 
 class CommentInput extends React.Component {
 
     constructor(){
         super()
-        this.state = {comment: ""}
+        this.state = {
+            content: ""
+        }
     }
 
     handleChange(e){
-        this.setState({comment: e.target.value})
+        this.setState({[e.target.name]: e.target.value})
+    }
+
+    handleSubmit(e) {
+        e.preventDefault()
+        this.props.addComment(this.state.content, this.props.song_id)
+        this.setState({content: ""})
     }
 
     render(){
         console.log("comment input")
+        console.log(this.state.content)
         return (
             <div>
-                <form>
+                <form onSubmit={this.handleSubmit.bind(this)}>
                     <label>Comment: </label>
-                    <input type="text" onChange={this.handleChange.bind(this)} value={this.state.comment} name="comment"/>
+                    <input type="text" onChange={this.handleChange.bind(this)} value={this.state.content} name="content"/>
+                    <input type="submit"/>
                 </form>
             </div>
         )
     }
 }
 
-export default connect(null)(CommentInput)
-
-
-// render() {
-// 	return (
-// 		...form onSubmit={...
+export default connect(null, {addComment})(CommentInput)
