@@ -8,7 +8,7 @@ const Song = (props) => {
     const song = props.songs.find(song => song.id === parseInt(props.match.params.id))
 
     return (
-        <div>
+        <div className="song">
             <img 
             className="single-image"
             src={song.image_link}

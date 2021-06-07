@@ -1,4 +1,5 @@
 .App {
+  background-color: #F6F6F6;
   text-align: center;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -18,13 +19,66 @@
   border: 2px solid black;
 }
 
-.container {
+
+.navbar-container {
   border-bottom: 2px solid black;
   display: flex;
 }
 
-.container > div {
+.navbar-container > div {
   flex: 1;
+}
+
+.home {
+  display: flex;
+}
+
+.title {
+  font-size: 100px;
+  flex: 1;
+  padding: 5rem;
+  background-color: black;
+  color: white;
+  vertical-align: middle;
+}
+
+.title:hover {
+  font-style: oblique;
+}
+
+.copy {
+  flex: 1;
+  padding: 1rem;
+  color: black;
+}
+
+.song {
+  background-color: #F6F6F6;
+}
+
+.footer-container {
+  border-top: 2px solid black;
+  display: flex;
+}
+
+.date:hover {
+  background-color: black;
+  color: white;
+}
+
+.song-nav:hover {
+  background-color: black;
+  color: white;
+}
+
+.search:hover {
+  background-color: black;
+  color: white;
+}
+
+@keyframes scroll {
+  from {left: 0px;}
+  to {left: 200px;}
 }
 
 .songs {
@@ -50,8 +104,6 @@
   -webkit-filter: grayscale(100%);
 }
 
-
-
 .songs > div p {
   font-style: italic;
 }
@@ -60,20 +112,30 @@
   flex: 1 0 20%; margin: 5px;
 }
 
-#headline {
-  font-size: 75px;
+.headline h4 {
+  font-size: 50px;
   text-align: center;
   margin-top: 10px;
-  margin-top: 10px;
+  margin-bottom: 0px;
 }
 
-#headline:hover {
-  color: blue;
+.headline p {
+  margin-top: 0px;
+  font-style: italic;
+}
+
+.headline h4:hover {
+  font-style: italic;
 }
 
 .images, .single-image {
   max-width: 150px;
   max-height: 150px
+}
+
+.comment-box {
+  border: 1px solid black;
+  /* position: absolute; */
 }
 
 @keyframes App-logo-spin {

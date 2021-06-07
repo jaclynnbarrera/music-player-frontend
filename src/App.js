@@ -2,9 +2,10 @@
 import './App.css';
 import React from 'react'
 import SongsContainer from './containers/SongsContainer'
-import NavBar from './NavBar'
+import NavBar from './components/NavBar'
 import Home from './components/Home'
 import { Route } from 'react-router-dom'
+import Footer from './components/Footer'
 
 class App extends React.Component {
 
@@ -13,9 +14,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <NavBar />
-        <h4 id="headline">RADIO 135</h4>
         <Route exact path="/" component={Home}/>
         <SongsContainer />
+        <Footer />
       </div>
     );
   }
