@@ -18,4 +18,3 @@ const VideoEmbed = (props) => {
 }
 
 export default VideoEmbed
-

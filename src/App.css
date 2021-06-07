@@ -38,7 +38,19 @@
   width: 80%;
   height: 80%;
   object-fit: contain;
+  filter: none;
+  -webkit-filter: grayscale(0);
 }
+
+.songs > div img:hover {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+
+
 
 .songs > div p {
   font-style: italic;
