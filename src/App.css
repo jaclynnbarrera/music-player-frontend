@@ -1,6 +1,6 @@
-/* .App {
+.App {
   text-align: center;
-} */
+}
 
 .App-logo {
   height: 40vmin;
@@ -13,29 +13,30 @@
   }
 }
 
-#BeSweet img {
-  max-width: 150px;
-  max-height: 150px
+.container {
+  border: 2px solid black;
+  display: flex;
 }
 
-.BeSweetHover img {
-  max-width: 300px;
-  max-height: 150px;
+.container > div {
+  flex: 1;
 }
 
-#InMyRoom img {
-  max-width: 150px;
-  max-height: 150px;
+.songs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-around;
 }
 
-#YaJustNeed2BelieveinYaself img {
-  max-width: 150px;
-  max-height: 150px;
+.songs > div img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
 }
 
-#Yonaguni img {
-  max-width: 150px;
-  max-width: 150px;
+.songs > div {
+  flex: 1 1 150px;
 }
 
 #headline {
@@ -45,20 +46,14 @@
   margin-top: 10px;
 }
 
-/* .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#headline:hover {
+  color: blue;
 }
 
-.App-link {
-  color: #61dafb;
-} */
+.images, .single-image {
+  max-width: 150px;
+  max-height: 150px
+}
 
 @keyframes App-logo-spin {
   from {

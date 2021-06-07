@@ -5,11 +5,11 @@ const Songs = (props) => {
 
     console.log("songs")
     return (
-        <div>
+        <div className="songs">
             {props.songs.map(song => 
             <div 
             key={song.id} 
-            id={song.title.split(" ").join("")}>
+            className={song.title.split(" ").join("")}>
             <Link to={`/songs/${song.id}`}><img src={song.image_link} alt="artist"></img></Link>
             </div>
             )}

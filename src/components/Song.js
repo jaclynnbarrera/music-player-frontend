@@ -8,8 +8,9 @@ const Song = (props) => {
     const song = props.songs.find(song => song.id === parseInt(props.match.params.id))
 
     return (
-        <div id={song.title.split(" ").join("")}>
+        <div>
             <img 
+            className="single-image"
             src={song.image_link}
             alt="artist"
             ></img>
