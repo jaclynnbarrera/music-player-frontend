@@ -10,7 +10,10 @@ const Songs = (props) => {
             <div 
             key={song.id} 
             className={song.title.split(" ").join("")}>
-            <Link to={`/songs/${song.id}`}><img src={song.image_link} alt="artist"></img></Link>
+            <Link to={`/songs/${song.id}`}>
+                <img src={song.image_link} alt="artist"></img>
+                </Link>
+                <p>{song.title}</p>
             </div>
             )}
         </div>        
