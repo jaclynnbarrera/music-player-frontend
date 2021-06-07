@@ -16,28 +16,24 @@ class Submit extends React.Component {
         console.log(e.target.value)
     }
 
-    // handleSubmit(e) {
-    //     e.preventDefault()
-    //     this.props.addComment(this.state.content, this.props.song_id)
-    //     this.setState({content: ""})
-    // }
+    handleSubmit(e) {
+        e.preventDefault()
+        this.props.submitSong(this.state.song)
+        this.setState({song: ""})
+    }
 
     render(){
-        console.log("form input")
+        console.log("song submit")
         return (
-            <div className="submit-form-container">
-                {/* <form onSubmit={this.handleSubmit.bind(this)}> */}
-                <div className="submit-form">
-                <form>
-                    <h4>Submit A Song!</h4>
+            <div>
+                <form onSubmit={this.handleSubmit.bind(this)}><br></br><br></br>
                     <label>Song Name: </label>
-                    <input type="text" onChange={this.handleChange.bind(this)} value={this.state.song} name="song"/>
+                    <input type="text" onChange={this.handleChange.bind(this)} value={this.state.song} name="song"/><br></br><br></br>
                     <input type="submit"/>
-                </form><br></br>
-                </div>
+                </form><br></br><br></br>
             </div>
         )
     }
 }
 
-export default Submit
+export default connect(null, {submitSong})(Submit)

@@ -1,4 +1,6 @@
-// export default function addComment(content, songId) {
+export default function addComment(song) {
+    debugger
+
 //     console.log("add comment action")
 //       return (dispatch) => {
 //         return fetch(`http://localhost:3000/songs/${songId}/comments`, {
@@ -9,4 +11,4 @@
 //         .then(r => r.json())
 //         .then(song => dispatch({type: "ADD_COMMENT", payload: song}))
 //       }
-//   }
+  }
