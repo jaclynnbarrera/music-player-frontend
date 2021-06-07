@@ -1,5 +1,4 @@
 import React from 'react'
-import VideoEmbed from './VideoEmbed'
 
 export default function Home() {
     return (

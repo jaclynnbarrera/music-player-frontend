@@ -57,7 +57,7 @@
 .title {
   font-size: 100px;
   flex: 1;
-  padding: 5rem;
+  padding: 10rem;
   background-color: black;
   color: white;
   vertical-align: middle;
@@ -65,6 +65,7 @@
 
 .title:hover {
   font-style: oblique;
+  flex: 1;
 }
 
 .copy {
@@ -132,6 +133,15 @@
 .comment-box {
   border: 1px solid black;
 }
+
+/* SUBMITASONG */
+/* .submit-form {
+  padding: 50px;
+  text-align: center;
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+} */
 
 /* FOOTER */
 .footer-container {

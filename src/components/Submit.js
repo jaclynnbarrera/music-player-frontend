@@ -1,17 +1,20 @@
 import React from 'react'
+import { connect } from 'react-redux'
+import submitSong from '../actions/submitSong'
 
 class Submit extends React.Component {
 
     constructor(){
         super()
         this.state = {
-            content: ""
+            song: ""
         }
     }
 
-    // handleChange(e){
-    //     this.setState({[e.target.name]: e.target.value})
-    // }
+    handleChange(e){
+        this.setState({[e.target.name]: e.target.value})
+        console.log(e.target.value)
+    }
 
     // handleSubmit(e) {
     //     e.preventDefault()
@@ -20,17 +23,18 @@ class Submit extends React.Component {
     // }
 
     render(){
-        console.log("comment input")
+        console.log("form input")
         return (
-            <div>
+            <div className="submit-form-container">
                 {/* <form onSubmit={this.handleSubmit.bind(this)}> */}
+                <div className="submit-form">
                 <form>
-                    <label>Submit A Song: </label>
-                    {/* <input type="text" onChange={this.handleChange.bind(this)} value={this.state.content} name="content"/> */}
-                    <input type="text" name="content"/>
-
+                    <h4>Submit A Song!</h4>
+                    <label>Song Name: </label>
+                    <input type="text" onChange={this.handleChange.bind(this)} value={this.state.song} name="song"/>
                     <input type="submit"/>
-                </form>
+                </form><br></br>
+                </div>
             </div>
         )
     }
