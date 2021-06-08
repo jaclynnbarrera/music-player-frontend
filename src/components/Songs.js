@@ -1,11 +1,13 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import Search from './Search'
 
 const Songs = (props) => {
 
     console.log("songs")
     return (
         <div className="headline"><h4>RADIO 135</h4>
+        <Search />
         <div className="songs">
             {props.songs.map(song => 
             <div 
@@ -15,9 +17,10 @@ const Songs = (props) => {
                 <p>{song.title}</p>
             </div>
             )}
-        </div>     
+        </div>  
         </div>
     )
 }
 
 export default Songs
+

@@ -39,7 +39,7 @@
   color: white;
 }
 
-.submit:hover {
+.sign-in:hover {
   background-color: black;
   color: white;
 }
@@ -134,6 +134,21 @@
   border: 1px solid black;
 }
 
+.comments {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.single-image {
+  padding-top: 10px;
+  max-width: 500px;
+  max-height: 300px;;
+}
+
+.song p {
+  margin: 50px;
+}
+
 /* SUBMITASONG */
 /* .submit-form {
   padding: 50px;
@@ -149,6 +164,15 @@
   display: flex;
 }
 
+/* DRAG */
+.single-image {
+  cursor: pointer;
+}
+
+.hold {
+  border: solid #CCC 4px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -157,3 +181,4 @@
     transform: rotate(360deg);
   }
 }
+

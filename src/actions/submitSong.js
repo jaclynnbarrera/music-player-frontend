@@ -1,14 +1,15 @@
-export default function addComment(song) {
-    debugger
+// export default function addComment(song) {
+//     console.log({song})
+//     debugger
+// //     console.log("add comment action")
+// //       return (dispatch) => {
+// //         return fetch(`http://localhost:3000/songs/${songId}/comments`, {
+// //           method: "POST",
+// //           headers: {Accept: "application/json", "Content-Type": "application/json"},
+// //           body: JSON.stringify({content})
+// //         })
+// //         .then(r => r.json())
+// //         .then(song => dispatch({type: "ADD_COMMENT", payload: song}))
+// //       }
+// }
 
-//     console.log("add comment action")
-//       return (dispatch) => {
-//         return fetch(`http://localhost:3000/songs/${songId}/comments`, {
-//           method: "POST",
-//           headers: {Accept: "application/json", "Content-Type": "application/json"},
-//           body: JSON.stringify({content})
-//         })
-//         .then(r => r.json())
-//         .then(song => dispatch({type: "ADD_COMMENT", payload: song}))
-//       }
-  }

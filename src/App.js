@@ -18,7 +18,7 @@ class App extends React.Component {
         <Route exact path="/" component={Home}/>
         <Route exact path="/submit" component={Submit}/>
         <SongsContainer />
-        <Footer />
+        {/* <Footer /> */}
       </div>
     );
   }
