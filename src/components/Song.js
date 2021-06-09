@@ -14,19 +14,15 @@ const Song = (props) => {
     }
 
     return (
-        <div className="song">
-            <img 
-            draggable="true"
-            className="single-image"
-            src={song.image_link}
-            alt="artist"
-            onDragStart={(e) => handleDragStart(e)}
-            ></img>
-            <h1>{song.artist} - {song.title}</h1>
-            <p>{song.artist_about}</p>
-            <VideoEmbed video_link={song.video_link} />
-            <CommentsContainer song={song}/>
-        </div>        
+        <div class="song-flex">
+            <div class="media"><img className="single-image" src={song.image_link} alt="artist"></img><VideoEmbed video_link={song.video_link} /></div>
+            <div class="info-comments">
+                <div class="info">
+                    <h1>{song.title.toUpperCase()}<br></br>{song.artist.toUpperCase()}</h1>
+                    <p>{song.artist_about}</p></div>
+                <div class="comments"><CommentsContainer song={song}/></div>
+            </div>
+        </div>    
     )
 }
 

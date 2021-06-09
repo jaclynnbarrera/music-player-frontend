@@ -15,38 +15,53 @@
   }
 }
 
-#root {
-  border: 2px solid black;
-}
-
 /* NAV */
 .navbar-container {
   border-bottom: 2px solid black;
   display: flex;
+  padding: 10px;
 }
 
 .navbar-container > div {
   flex: 1;
 }
 
-.date:hover {
+.date:hover, .song-nav:hover, .sign-in:hover, .home :hover {
   background-color: black;
   color: white;
 }
 
-.song-nav:hover {
-  background-color: black;
-  color: white;
+.song-flex {
+  display: flex;
+  align-items: stretch;
+  width: 100vw;
 }
 
-.sign-in:hover {
-  background-color: black;
-  color: white;
+.media {
+  flex: 0 0 150px;
+  border-right: 1px solid  black;
+  padding: 15px;
 }
 
-.home:hover {
-  background-color: black;
-  color: white;
+.info-comments {
+  flex-direction: column;
+  display: flex;
+  flex-grow: 1;
+}
+
+.single-image {
+  max-width: 400px;
+  padding-bottom: 10px;
+}
+
+.comments {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.info-comments > *  {
+  text-align: left;
+  padding: 10px;
 }
 
 /* HOMEPAGE */
@@ -63,19 +78,10 @@
   vertical-align: middle;
 }
 
-.title:hover {
-  font-style: oblique;
-  flex: 1;
-}
-
 .copy {
   flex: 1;
   padding: 1rem;
   color: black;
-}
-
-.song {
-  background-color: #F6F6F6;
 }
 
 .songs {
@@ -125,29 +131,11 @@
   font-style: italic;
 }
 
-.images, .single-image {
+.images {
   max-width: 150px;
   max-height: 150px
 }
 
-.comment-box {
-  border: 1px solid black;
-}
-
-.comments {
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.single-image {
-  padding-top: 10px;
-  max-width: 500px;
-  max-height: 300px;;
-}
-
-.song p {
-  margin: 50px;
-}
 
 /* SUBMITASONG */
 /* .submit-form {
@@ -162,15 +150,6 @@
 .footer-container {
   border-top: 2px solid black;
   display: flex;
-}
-
-/* DRAG */
-.single-image {
-  cursor: pointer;
-}
-
-.hold {
-  border: solid #CCC 4px;
 }
 
 @keyframes App-logo-spin {

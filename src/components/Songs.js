@@ -6,8 +6,8 @@ const Songs = (props) => {
 
     console.log("songs")
     return (
-        <div className="headline"><h4>RADIO 135</h4>
-        <Search />
+        <div>
+            <Search />
         <div className="songs">
             {props.songs.map(song => 
             <div 
@@ -23,4 +23,3 @@ const Songs = (props) => {
 }
 
 export default Songs
-

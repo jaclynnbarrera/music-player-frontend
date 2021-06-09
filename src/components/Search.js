@@ -4,24 +4,22 @@ import {useDispatch} from 'react-redux'
 const Search = props => {
 
   const dispatch = useDispatch()
-  console.log(dispatch)
 
-  function handleChange(e){
-    console.log(e.target.value)
-    const input = e.target.value
+  function handleSubmit(e){
+    if (e.key === "Enter"){
+      let input = e.target.value
     dispatch({
       type: "SEARCH",
       payload: input
-    })
+      })
+    }
   }
 
   return (
-    <div className="ui search">
-      <div className="ui icon input">
-        <input onChange={handleChange} className="prompt"/>
-        <i className="search icon" />
+    <div className="song-search">
+        <label>Search:</label>
+        <input onKeyPress={handleSubmit}/>
       </div>
-    </div>
   )
 }
 

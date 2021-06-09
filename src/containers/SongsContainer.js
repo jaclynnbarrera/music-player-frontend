@@ -1,6 +1,7 @@
 import React from 'react'
 import Songs from '../components/Songs'
 import Song from '../components/Song'
+import Search from '../components/Search'
 import { connect } from 'react-redux'
 import fetchSongs from '../actions/fetchSongs.js'
 import { Route } from 'react-router-dom'
