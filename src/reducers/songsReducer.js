@@ -1,8 +1,8 @@
-export default function songsReducer(state = {songs: [], search: []}, action){
+export default function songsReducer(state = {songs: [], searchResults: []}, action){
     console.log("in songs reducer")
     switch(action.type){
         case "FETCH_SONGS":
-            return {songs: action.payload, search: []}
+            return {songs: action.payload, searchResults: []}
         case "ADD_COMMENT":
             const songs = state.songs.map(song => {
                 if (song.id === action.payload.id) {
@@ -13,7 +13,7 @@ export default function songsReducer(state = {songs: [], search: []}, action){
         })
             return {...state, songs: songs}
         case "SEARCH":
-            return {search: state.songs.filter((song) => song.title.includes(action.payload))}
+            return {searchResults: state.songs.filter((song) => song.title.includes(action.payload))}
         default:
             return state
     }

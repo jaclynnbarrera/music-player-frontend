@@ -3,7 +3,8 @@ import React from 'react'
 const SearchResults = (props) => {
     return (
         <div>
-           {props.results.map(result => <li>{result.title}</li>)}
+            <h2>Search Results for "{props.location.searchTerm}"</h2>
+            {props.location.results.map(result => result.title)}
         </div>
     )
 }
