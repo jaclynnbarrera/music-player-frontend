@@ -7,12 +7,6 @@ const Song = (props) => {
 
     const song = props.songs.find(song => song.id === parseInt(props.match.params.id))
 
-    function handleDragStart(e) {
-        e.preventDefault()
-
-
-    }
-
     return (
         <div class="song-flex">
             <div class="media"><img className="single-image" src={song.image_link} alt="artist"></img><VideoEmbed video_link={song.video_link} /></div>

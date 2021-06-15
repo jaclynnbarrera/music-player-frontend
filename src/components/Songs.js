@@ -1,13 +1,10 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import Search from './Search'
 
 const Songs = (props) => {
 
-    console.log("songs")
     return (
         <div>
-            <Search />
         <div className="songs">
             {props.songs.map(song => 
             <div 

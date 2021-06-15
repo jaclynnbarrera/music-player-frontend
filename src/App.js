@@ -2,9 +2,9 @@
 import './App.css';
 import React from 'react'
 import SongsContainer from './containers/SongsContainer'
+import SearchContainer from './containers/SearchContainer'
 import NavBar from './components/NavBar'
 import Home from './components/Home'
-import Submit from './components/Submit'
 import { Route } from 'react-router-dom'
 import Footer from './components/Footer'
 
@@ -16,6 +16,7 @@ class App extends React.Component {
       <div className="App">
         <NavBar />
         <Route exact path="/" component={Home}/>
+        <Route exact path="/search" component={SearchContainer}/>
         <SongsContainer />
         <Footer />
       </div>
