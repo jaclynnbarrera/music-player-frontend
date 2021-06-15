@@ -24,7 +24,7 @@ class SongsContainer extends React.Component {
 
 function mapStateToProps(state) {
     console.log('songs container mapstatetoprops')
-    return {songs: state.songs, search: state.search}
+    return {songs: state.songs}
 }
 
 export default connect(mapStateToProps, {fetchSongs})(SongsContainer)

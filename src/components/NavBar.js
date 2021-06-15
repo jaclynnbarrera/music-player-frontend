@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom'
 import React from 'react'
-import SearchContainer from '../containers/SearchContainer'
+import SearchInput from '../components/SearchInput'
 
 export default function NavBar() {
   
@@ -14,7 +14,7 @@ export default function NavBar() {
         <div className="home"><Link to="/">Home</Link></div>
         <div className="date">{today.toDateString()} | {today.getHours()}:{today.getMinutes()}</div>
         <div className="song-nav"> <Link to="/songs">Songs</Link></div>
-        <SearchContainer/>
+        <SearchInput/>
       </div>
       </div>
     </div>
