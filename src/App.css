@@ -1,7 +1,7 @@
 .App {
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
   text-align: center;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .App-logo {
@@ -12,6 +12,27 @@
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.headline {
+  font-size: 50px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  animation: animate 30s linear infinite;
+}
+
+.headline:hover {
+  font-style: italic;
+}
+
+@keyframes animate {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
 
@@ -26,7 +47,10 @@
   flex: 1;
 }
 
-.date:hover, .song-nav:hover, .sign-in:hover, .home :hover {
+.date:hover,
+.song-nav:hover,
+.sign-in:hover,
+.home :hover {
   background-color: black;
   color: white;
 }
@@ -39,7 +63,7 @@
 
 .media {
   flex: 0 0 150px;
-  border-right: 1px solid  black;
+  border-right: 1px solid black;
   padding: 15px;
 }
 
@@ -59,7 +83,7 @@
   padding-bottom: 50px;
 }
 
-.info-comments > *  {
+.info-comments > * {
   text-align: left;
   padding: 10px;
 }
@@ -112,30 +136,14 @@
 }
 
 .songs > div {
-  flex: 1 0 20%; margin: 5px;
-}
-
-.headline h4 {
-  font-size: 50px;
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 0px;
-}
-
-.headline p {
-  margin-top: 0px;
-  font-style: italic;
-}
-
-.headline h4:hover {
-  font-style: italic;
+  flex: 1 0 20%;
+  margin: 5px;
 }
 
 .images {
   max-width: 150px;
-  max-height: 150px
+  max-height: 150px;
 }
-
 
 /* SUBMITASONG */
 /* .submit-form {
@@ -160,4 +168,3 @@
     transform: rotate(360deg);
   }
 }
-

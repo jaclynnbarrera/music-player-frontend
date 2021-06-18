@@ -20,7 +20,7 @@ class SearchInput extends React.Component {
   handleSubmit(e){
     e.preventDefault()
     this.props.searchSong(this.state.searchTerm)
-    this.setState({search: "", isSubmitted: true})
+    this.setState({isSubmitted: true})
   }
 
   render(){
