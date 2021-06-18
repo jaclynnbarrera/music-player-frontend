@@ -1,23 +1,40 @@
-import React from 'react'
-import CommentsContainer from '../containers/CommentsContainer'
-import VideoEmbed from './VideoEmbed'
+import React from "react";
+import CommentsContainer from "../containers/CommentsContainer";
+import VideoEmbed from "./VideoEmbed";
 
 const Song = (props) => {
-    console.log("song")
+  console.log("song");
 
-    const song = props.songs.find(song => song.id === parseInt(props.match.params.id))
+  const song = props.songs.find(
+    (song) => song.id === parseInt(props.match.params.id)
+  );
 
-    return (
-        <div class="song-flex">
-            <div class="media"><img className="single-image" src={song.image_link} alt="artist"></img><VideoEmbed video_link={song.video_link} /></div>
-            <div class="info-comments">
-                <div class="info">
-                    <h1>{song.title.toUpperCase()}<br></br>{song.artist.toUpperCase()}</h1>
-                    <p>{song.artist_about}</p></div>
-                <div class="comments"><CommentsContainer song={song}/></div>
-            </div>
-        </div>    
-    )
-}
+  return (
+    <div className="song-flex">
+      <div className="media">
+        <img
+          className="single-image"
+          src={song && song.image_link}
+          alt="artist"
+        ></img>
+        <VideoEmbed video_link={song && song.video_link} />
+      </div>
+      <div className="info-comments">
+        <div className="info">
+          <h1>
+            {song && song.title.toUpperCase()}
+            <br></br>
+            {song && song.artist.toUpperCase()}
+          </h1>
+          <p>{song && song.artist_about}</p>
+        </div>
+        <div className="comments">
+          {song && <CommentsContainer song={song} />}
+          {/* <CommentsContainer song={song} /> */}
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default Song
+export default Song;

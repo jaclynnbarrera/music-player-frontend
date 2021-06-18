@@ -79,8 +79,12 @@
 }
 
 .comments {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  display: flex;
+  border: 2px solid black;
+  display: inline-block;
+  max-width: 50%;
+  line-height: 0.5rem;
+  margin-left: 20%;
 }
 
 .info-comments > * {
