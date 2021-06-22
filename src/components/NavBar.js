@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import React from "react";
-import SearchInput from "../components/SearchInput";
+import SearchInput from "./SearchInput";
 
 export default function NavBar() {
   const date = Date.now();
