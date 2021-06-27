@@ -5,7 +5,7 @@ const Comments = (props) => {
   return (
     <div className="comments-box">
       {props.comments &&
-        props.comments.map((comment) => <p>{comment.content}</p>)}
+        props.comments.map((comment, i) => <p key={i}>{comment.content}</p>)}
     </div>
   );
 };

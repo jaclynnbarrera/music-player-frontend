@@ -12,16 +12,18 @@ export default function NavBar() {
         <h4 className="headline">RADIO 135 RADIO 135 RADIO 135</h4>
         <div className="navbar-container">
           <div className="home">
-            <Link to="/">Home</Link>
+            <Link to="/">HOME</Link>
           </div>
           <div className="date">
-            today is {today.toDateString()} | {today.getHours()}:
+            TODAY IS {today.toDateString()} | {today.getHours()}:
             {today.getMinutes()}
           </div>
           <div className="song-nav">
             {" "}
-            <Link to="/songs">Songs</Link>
+            <Link to="/songs">TRACKS</Link>
           </div>
+          <div className="playlists">PLAYLISTS</div>
+
           <SearchInput />
         </div>
       </div>
