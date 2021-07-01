@@ -14,16 +14,16 @@ export default function NavBar() {
           <div className="home">
             <Link to="/">HOME</Link>
           </div>
-          <div className="date">
+          {/* <div className="date">
             TODAY IS {today.toDateString()} | {today.getHours()}:
             {today.getMinutes()}
-          </div>
+          </div> */}
           <div className="song-nav">
             {" "}
             <Link to="/songs">TRACKS</Link>
           </div>
           <div className="playlists">PLAYLISTS</div>
-
+          <div className="playlists">SHOP</div>
           <SearchInput />
         </div>
       </div>
