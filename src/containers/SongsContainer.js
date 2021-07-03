@@ -1,9 +1,11 @@
 import React from "react";
+import Home from "../components/Home";
 import Songs from "../components/Songs";
 import Song from "../components/Song";
 import { connect } from "react-redux";
 import fetchSongs from "../actions/fetchSongs.js";
 import { Route } from "react-router-dom";
+import DailyPickContainer from "./DailyPickContainer";
 
 class SongsContainer extends React.Component {
   componentDidMount() {
@@ -24,6 +26,9 @@ class SongsContainer extends React.Component {
             <Song songs={this.props.songs} {...routerProps} />
           )}
         />
+        <Route exact path="/">
+          <DailyPickContainer song={this.props.songs} />
+        </Route>
       </>
     );
   }

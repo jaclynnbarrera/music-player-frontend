@@ -5,10 +5,14 @@ import FeatureSongVideo from "../components/FeatureSongVideo";
 class DailyPickContainer extends React.Component {
   render() {
     console.log("daily pick container");
+
+    var song =
+      this.props.song[Math.floor(Math.random() * this.props.song.length)];
+
     return (
       <div className="daily-pick-container">
         <FeatureSongInfo />
-        <FeatureSongVideo />
+        <FeatureSongVideo video={song.video_link} />
       </div>
     );
   }
