@@ -1,9 +1,10 @@
 import React from "react";
+import VideoEmbed from "./VideoEmbed";
 
-const SongVideo = () => {
+const SongVideo = (props) => {
   return (
     <div className="song-video">
-      SongVideo SongVideo SongVideo SongVideo SongVideo
+      <VideoEmbed video_link={props.video} />
     </div>
   );
 };

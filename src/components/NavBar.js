@@ -3,8 +3,8 @@ import React from "react";
 import SearchInput from "./SearchInput";
 
 export default function NavBar() {
-  const date = Date.now();
-  const today = new Date(date);
+  // const date = Date.now();
+  // const today = new Date(date);
 
   return (
     <div>

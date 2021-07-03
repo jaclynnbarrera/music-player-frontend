@@ -11,8 +11,8 @@ class DailyPickContainer extends React.Component {
 
     return (
       <div className="daily-pick-container">
-        <FeatureSongInfo />
-        <FeatureSongVideo video={song.video_link} />
+        <FeatureSongInfo info={song && [song.title, song.artist]} />
+        <FeatureSongVideo video={song && song.video_link} />
       </div>
     );
   }

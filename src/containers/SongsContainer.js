@@ -1,5 +1,4 @@
 import React from "react";
-import Home from "../components/Home";
 import Songs from "../components/Songs";
 import Song from "../components/Song";
 import { connect } from "react-redux";

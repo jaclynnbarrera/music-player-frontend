@@ -1,11 +1,11 @@
 // import logo from './logo.svg';
 import "./App.css";
 import React from "react";
-import SongsContainer from "./containers/SongsContainer";
 import NavBar from "./components/NavBar";
 import { Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import SearchResults from "./components/SearchResults";
+import Home from "./components/Home";
 
 class App extends React.Component {
   render() {
@@ -14,7 +14,7 @@ class App extends React.Component {
       <div className="App">
         <NavBar />
         <Route exact path="/search" component={SearchResults} />
-        <SongsContainer />
+        <Home />
         <Footer />
       </div>
     );
