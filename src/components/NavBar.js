@@ -9,7 +9,7 @@ export default function NavBar() {
   return (
     <div>
       <div>
-        <h4 className="headline">RADIO 135 RADIO 135 RADIO 135</h4>
+        <h4 className="headline">RADIO 135 RADIO 135 RADIO 135 RADIO 135</h4>
         <div className="navbar-container">
           <div className="home">
             <Link to="/">HOME</Link>

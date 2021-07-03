@@ -55,6 +55,12 @@
   color: white;
 }
 
+.daily-pick {
+  border: 2px solid red;
+  padding: 15px;
+  margin: 15px;
+}
+
 .song-flex {
   display: flex;
   align-items: stretch;
