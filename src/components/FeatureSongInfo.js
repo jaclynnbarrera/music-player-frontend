@@ -1,9 +1,12 @@
 import React from "react";
 
-const SongInfo = () => {
+const SongInfo = (props) => {
   return (
     <div className="song-info">
-      SongInfo SongInfo SongInfo SongInfo SongInfo
+      <p>
+        Today's Pick: {props.info && props.info[0]} by{" "}
+        {props.info && props.info[1]}
+      </p>
     </div>
   );
 };

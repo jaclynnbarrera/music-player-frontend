@@ -23,10 +23,6 @@
   animation: animate 30s linear infinite;
 }
 
-.headline:hover {
-  font-style: italic;
-}
-
 @keyframes animate {
   0% {
     transform: translateX(100%);
@@ -36,7 +32,6 @@
   }
 }
 
-/* NAV */
 .navbar-container {
   border-bottom: 2px solid black;
   display: flex;
@@ -58,7 +53,6 @@
 .daily-pick-container {
   display: flex;
   justify-content: center;
-  border: 2px solid red;
   padding: 15px;
   margin: auto;
 }
@@ -67,11 +61,25 @@
   width: 50%;
   float: left;
   border-right: 2px solid black;
+  padding-right: 15px;
+}
+
+.song-info:hover {
+  font-style: italic;
+}
+
+.song-info p {
+  font-size: 5vw;
 }
 
 .song-video {
   width: 50%;
   float: right;
+}
+.video {
+  position: relative;
+  overflow: hidden;
+  padding-left: 15px;
 }
 
 .song-flex {
@@ -111,7 +119,6 @@
   padding: 10px;
 }
 
-/* HOMEPAGE */
 .home-page {
   display: flex;
 }

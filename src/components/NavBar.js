@@ -12,7 +12,8 @@ export default function NavBar() {
         <h4 className="headline">RADIO 135 RADIO 135 RADIO 135 RADIO 135</h4>
         <div className="navbar-container">
           <div className="home">
-            <Link to="/">HOME</Link>
+            {/* <Link to="/">HOME</Link> */}
+            HOME
           </div>
           {/* <div className="date">
             TODAY IS {today.toDateString()} | {today.getHours()}:
@@ -20,7 +21,8 @@ export default function NavBar() {
           </div> */}
           <div className="song-nav">
             {" "}
-            <Link to="/songs">TRACKS</Link>
+            SONGS
+            {/* <Link to="/songs">SONGS</Link> */}
           </div>
           <div className="playlists">PLAYLISTS</div>
           <div className="playlists">SHOP</div>

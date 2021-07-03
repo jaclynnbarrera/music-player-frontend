@@ -1,12 +1,25 @@
 import React from "react";
-import SongsContainer from "../containers/SongsContainer";
+import { connect } from "react-redux";
+import fetchSongs from "../actions/fetchSongs";
+import DailyPickContainer from "../containers/DailyPickContainer";
 
-export default function Home() {
-  return (
-    <div className="home-page">
-      <SongsContainer />
-      {/* <div className="title">RADIO <br></br>135</div>
-            <div className="copy">An online radio station with curated tunes</div> */}
-    </div>
-  );
+class Home extends React.Component {
+  componentDidMount() {
+    this.props.fetchSongs();
+  }
+
+  render() {
+    console.log("home");
+    return (
+      <div>
+        <DailyPickContainer song={this.props.songs} />
+      </div>
+    );
+  }
 }
+
+function mapStateToProps(state) {
+  return { songs: state.songs };
+}
+
+export default connect(mapStateToProps, { fetchSongs })(Home);
