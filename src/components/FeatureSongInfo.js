@@ -1,7 +1,11 @@
 import React from "react";
 
 const SongInfo = () => {
-  return <div>SongInfo</div>;
+  return (
+    <div className="song-info">
+      SongInfo SongInfo SongInfo SongInfo SongInfo
+    </div>
+  );
 };
 
 export default SongInfo;

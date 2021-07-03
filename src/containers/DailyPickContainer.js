@@ -6,8 +6,7 @@ class DailyPickContainer extends React.Component {
   render() {
     console.log("daily pick container");
     return (
-      <div className="daily-pick">
-        Daily Pick Container
+      <div className="daily-pick-container">
         <FeatureSongInfo />
         <FeatureSongVideo />
       </div>
