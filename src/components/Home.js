@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import fetchSongs from "../actions/fetchSongs";
 import DailyPickContainer from "../containers/DailyPickContainer";
+import Songs from "./Songs";
 
 class Home extends React.Component {
   componentDidMount() {
@@ -9,10 +10,14 @@ class Home extends React.Component {
   }
 
   render() {
+    const featuredSongs = this.props.songs.slice(0, 8).map((s) => {
+      return s;
+    });
     console.log("home");
     return (
       <div>
         <DailyPickContainer song={this.props.songs} />
+        <Songs songs={featuredSongs} />
       </div>
     );
   }
