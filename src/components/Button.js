@@ -13,8 +13,8 @@ class Button extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={() => this.handleClick()}>like</button>
-        <p>likes: {this.state.likes}</p>
+        {/* <button onClick={() => this.handleClick()}>like</button>
+        <p>likes: {this.state.likes}</p> */}
       </div>
     );
   }

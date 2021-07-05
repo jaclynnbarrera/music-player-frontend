@@ -50,42 +50,30 @@
   color: white;
 }
 
-.daily-pick-container {
-  display: flex;
-  justify-content: center;
-  padding: 15px;
-  margin: auto;
+#featured {
+  text-align: left;
+  padding: 7px;
+  font-size: 2vw;
 }
 
-.song-info {
-  width: 50%;
-  float: left;
-  border-right: 2px solid black;
-  padding-right: 15px;
-}
-
-.song-info:hover {
-  font-style: italic;
-}
-
-.song-info p {
-  font-size: 5vw;
-}
-
-.song-video {
-  width: 50%;
-  float: right;
-}
 .video {
   position: relative;
   overflow: hidden;
-  padding-left: 15px;
+  padding: 15px;
+  object-fit: fill;
 }
 
-.song-flex {
-  display: flex;
-  align-items: stretch;
-  width: 100vw;
+.song {
+  border: 2px solid black;
+  text-transform: uppercase;
+  padding: 15px;
+}
+
+.song p {
+  display: inline-block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .media {
@@ -161,10 +149,6 @@
   -webkit-filter: grayscale(100%);
 }
 
-.songs > div p {
-  font-style: italic;
-}
-
 .songs > div {
   flex: 1 0 20%;
   margin: 5px;
@@ -187,7 +171,13 @@
 /* FOOTER */
 .footer-container {
   border-top: 2px solid black;
+  border-bottom: 2px solid black;
   display: flex;
+}
+
+.footer-container p {
+  margin: 1%;
+  animation: animate 30s linear infinite;
 }
 
 @keyframes App-logo-spin {

@@ -17,6 +17,7 @@ class Home extends React.Component {
     return (
       <div>
         <DailyPickContainer song={this.props.songs} />
+        <h3 id="featured">FEATURED</h3>
         <Songs songs={featuredSongs} />
       </div>
     );

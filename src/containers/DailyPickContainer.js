@@ -10,9 +10,9 @@ class DailyPickContainer extends React.Component {
       this.props.song[Math.floor(Math.random() * this.props.song.length)];
     return (
       <div className="daily-pick-container">
-        <FeatureSongInfo
+        {/* <FeatureSongInfo
           info={song && [song.title, song.artist, song.artist_about]}
-        />
+        /> */}
         <FeatureSongVideo video={song && song.video_link} />
       </div>
     );

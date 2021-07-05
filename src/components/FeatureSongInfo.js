@@ -4,8 +4,10 @@ const SongInfo = (props) => {
   return (
     <div className="song-info">
       <p>
-        Today's Pick: {props.info && props.info[0]} by{" "}
-        {props.info && props.info[1]}
+        radio 135 is an online radio station where you can find curated tunes
+        and playlists oldies and new. radio 135 is an online radio station where
+        you can find curated tunes and playlists oldies and new. radio 135 is an
+        online radio station <br></br>
       </p>
     </div>
   );
