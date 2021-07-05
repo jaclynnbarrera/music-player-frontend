@@ -14,12 +14,14 @@ class Home extends React.Component {
     const featuredSongs = this.props.songs.slice(0, 8).map((s) => {
       return s;
     });
-    console.log("home");
     return (
       <div>
-        <DailyPickContainer song={this.props.songs} />
-        <h3 id="featured">FEATURED</h3>
-        <Songs songs={featuredSongs} />
+        <Route exact path="/">
+          <DailyPickContainer song={this.props.songs} />
+          <h3 id="featured">FEATURED</h3>
+          <Songs songs={featuredSongs} />
+        </Route>
+
         <Route exact path="/songs">
           <Songs songs={this.props.songs} />
         </Route>
