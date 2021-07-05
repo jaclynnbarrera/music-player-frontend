@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import fetchSongs from "../actions/fetchSongs";
 import DailyPickContainer from "../containers/DailyPickContainer";
 import Songs from "./Songs";
+import { Route } from "react-router-dom";
 
 class Home extends React.Component {
   componentDidMount() {
@@ -19,6 +20,9 @@ class Home extends React.Component {
         <DailyPickContainer song={this.props.songs} />
         <h3 id="featured">FEATURED</h3>
         <Songs songs={featuredSongs} />
+        <Route exact path="/songs">
+          <Songs songs={this.props.songs} />
+        </Route>
       </div>
     );
   }
