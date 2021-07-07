@@ -12,17 +12,11 @@ export default function NavBar() {
         <h4 className="headline">RADIO 135 RADIO 135 RADIO 135 RADIO 135</h4>
         <div className="navbar-container">
           <div className="home">
-            {/* <Link to="/">HOME</Link> */}
-            HOME
+            <Link to="/">HOME</Link>
           </div>
-          {/* <div className="date">
-            TODAY IS {today.toDateString()} | {today.getHours()}:
-            {today.getMinutes()}
-          </div> */}
           <div className="song-nav">
             {" "}
-            SONGS
-            {/* <Link to="/songs">SONGS</Link> */}
+            <Link to="/songs">SONGS</Link>
           </div>
           <div className="playlists">PLAYLISTS</div>
           <div className="playlists">SHOP</div>
