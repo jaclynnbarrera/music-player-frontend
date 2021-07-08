@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import fetchSongs from "../actions/fetchSongs";
 import DailyPickContainer from "../containers/DailyPickContainer";
 import Songs from "./Songs";
+import Song from "./Song";
 import { Route } from "react-router-dom";
 
 class Home extends React.Component {
@@ -25,6 +26,13 @@ class Home extends React.Component {
         <Route exact path="/songs">
           <Songs songs={this.props.songs} />
         </Route>
+        <Route
+          exact
+          path="/songs/:id"
+          render={(routerProps) => (
+            <Song songs={this.props.songs} {...routerProps} />
+          )}
+        />
       </div>
     );
   }
