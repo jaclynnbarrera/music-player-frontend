@@ -3,7 +3,7 @@ import React from "react";
 const VideoEmbed = (props) => {
   console.log("video");
   return (
-    <div className="video">
+    <div className={"video" + (props.song ? "song" : "HP")}>
       <iframe
         width="1200"
         height="500"

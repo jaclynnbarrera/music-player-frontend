@@ -17,7 +17,7 @@ const Song = (props) => {
           src={song && song.image_link}
           alt="artist"
         ></img>
-        <VideoEmbed video_link={song && song.video_link} />
+        <VideoEmbed video_link={song && song.video_link} song={song} />
       </div>
       <div className="info-comments">
         <div className="info">
