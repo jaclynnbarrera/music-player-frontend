@@ -1,6 +1,6 @@
 export default function fetchSongs() {
   return (dispatch) => {
-    fetch("http://localhost:3000/songs")
+    fetch("https://calm-basin-04200.herokuapp.com/songs")
       .then(function (response) {
         return response.json();
       })
