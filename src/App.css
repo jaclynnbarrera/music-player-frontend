@@ -179,6 +179,12 @@
   max-height: 150px;
 }
 
+.song > p {
+  line-height: 20px;
+  margin-bottom: 5px;
+  padding-bottom: 50px;
+}
+
 /* SUBMITASONG */
 /* .submit-form {
   padding: 50px;
