@@ -26,7 +26,7 @@ const Song = (props) => {
             <br></br>
             {song && song.artist.toUpperCase()}
           </h1>
-          {song && song.categories.map((c, i) => <li key={i}>{c}</li>)}
+          {song && song.categories.map((c, i) => <p key={i}>{c}</p>)}
           <p>{song && song.artist_about}</p>
         </div>
         <div className="comments">
