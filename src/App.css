@@ -113,18 +113,22 @@
   height: 50%;
 }
 
-/* .comments {
-  display: flex;
-  border: 2px solid black;
-  display: inline-block;
-  max-width: 50%;
-  line-height: 0.5rem;
-  margin-left: 20%;
-} */
-
 .info-comments > * {
   text-align: left;
-  padding: 10px;
+  padding: 5px;
+}
+
+#genres {
+  display: flex;
+  align-items: left;
+  justify-content: flex-start;
+}
+
+#genres p {
+  border: 1px solid black;
+  border-radius: 1px;
+  padding: 2px;
+  margin: 2px;
 }
 
 .home-page {
