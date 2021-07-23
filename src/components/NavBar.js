@@ -15,8 +15,10 @@ export default function NavBar() {
             {" "}
             <Link to="/songs">SONGS</Link>
           </div>
-          <div className="playlists">PLAYLISTS</div>
-          <div className="playlists">SHOP</div>
+          <div className="mixes-nav">
+            {" "}
+            <Link to="/mixes">MIXES</Link>
+          </div>
           <SearchInput />
         </div>
       </div>
