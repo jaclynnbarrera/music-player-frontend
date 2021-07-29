@@ -4,6 +4,7 @@ import fetchSongs from "../actions/fetchSongs";
 import DailyPickContainer from "../containers/DailyPickContainer";
 import Songs from "./Songs";
 import Song from "./Song";
+import Mixes from "./Mixes";
 import { Route } from "react-router-dom";
 
 class Home extends React.Component {
@@ -15,6 +16,17 @@ class Home extends React.Component {
     const featuredSongs = this.props.songs.slice(0, 8).map((s) => {
       return s;
     });
+
+    let mixes = [];
+    mixes = this.props.songs.filter((song) =>
+      song.categories.includes("dj-set")
+    );
+
+    let songs = [];
+    songs = this.props.songs.filter(
+      (song) => !song.categories.includes("dj-set")
+    );
+
     return (
       <div>
         <Route exact path="/">
@@ -24,8 +36,13 @@ class Home extends React.Component {
         </Route>
 
         <Route exact path="/songs">
-          <Songs songs={this.props.songs} />
+          <Songs songs={songs} />
         </Route>
+
+        <Route exact path="/mixes">
+          <Mixes mixes={mixes} />
+        </Route>
+
         <Route
           exact
           path="/songs/:id"
