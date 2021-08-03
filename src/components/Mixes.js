@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Button from "./Button";
 
 const Mixes = (props) => {
   return (
@@ -14,7 +13,6 @@ const Mixes = (props) => {
             <p>
               {mix.title} - {mix.artist}
             </p>
-            {/* <Button /> */}
           </div>
         ))}
       </div>

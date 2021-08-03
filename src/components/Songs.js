@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Button from "./Button";
 
 class Songs extends React.Component {
   render() {
@@ -15,7 +14,6 @@ class Songs extends React.Component {
               <p>
                 {song.title} - {song.artist}
               </p>
-              <Button />
             </div>
           ))}
         </div>
