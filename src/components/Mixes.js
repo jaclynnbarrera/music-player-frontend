@@ -3,15 +3,14 @@ import { Link } from "react-router-dom";
 import Button from "./Button";
 
 const Mixes = (props) => {
-  debugger;
   return (
     <div>
       <div className="songs">
         {props.mixes.map((mix) => (
-          <div key={mix.id} className="mix">
-            {/* <Link to={`/songs/${song.id}`}>
-              <img src={song.image_link} alt="artist"></img>
-            </Link> */}
+          <div key={mix.id} className="song">
+            <Link to={`/songs/${mix.id}`}>
+              <img src={mix.image_link} alt="artist"></img>
+            </Link>
             <p>
               {mix.title} - {mix.artist}
             </p>
