@@ -2,7 +2,9 @@ import React from "react";
 import { connect } from "react-redux";
 import searchSong from "../actions/searchSong";
 import { withRouter } from "react-router-dom";
+import { Route } from "react-router-dom";
 import { Redirect } from "react-router-dom";
+import SearchResults from "./SearchResults";
 
 class SearchInput extends React.Component {
   constructor() {
@@ -34,15 +36,7 @@ class SearchInput extends React.Component {
             name="searchTerm"
           ></input>
         </form>
-        {this.state.isSubmitted && (
-          <Redirect
-            to={{
-              pathname: "/search",
-              results: this.props.results,
-              searchTerm: this.state.searchTerm,
-            }}
-          />
-        )}
+        {this.state.isSubmitted ? <Redirect to="/search" /> : null}
       </div>
     );
   }
