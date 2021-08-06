@@ -1,8 +1,5 @@
 import { Link } from "react-router-dom";
 import React from "react";
-import SearchInput from "./SearchInput";
-import { Route } from "react-router-dom";
-import SearchResults from "./SearchResults";
 
 export default function NavBar() {
   return (
@@ -21,9 +18,6 @@ export default function NavBar() {
             {" "}
             <Link to="/mixes">MIXES</Link>
           </div>
-          <Route exact path="/search">
-            <SearchInput />
-          </Route>
         </div>
       </div>
     </div>

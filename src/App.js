@@ -2,9 +2,7 @@
 import "./App.css";
 import React from "react";
 import NavBar from "./components/NavBar";
-import { Route } from "react-router-dom";
 import Footer from "./components/Footer";
-import SearchResults from "./components/SearchResults";
 import Home from "./components/Home";
 
 class App extends React.Component {
@@ -14,9 +12,6 @@ class App extends React.Component {
     return (
       <div className="App">
         <NavBar />
-        <Route exact path="/search">
-          <SearchResults />
-        </Route>
         <Home />
         <Footer />
       </div>

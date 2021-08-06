@@ -2,15 +2,22 @@ import React from "react";
 import searchSong from "../actions/searchSong";
 import { connect } from "react-redux";
 import { withRouter } from "react-router";
+import SearchResults from "./SearchResults";
 
-class SearchInput extends React.Component {
+class Search extends React.Component {
   constructor() {
     super();
     this.state = {
       searchTerm: "",
-      isSubmitted: false,
+      redirect: false,
     };
   }
+
+  // return {
+  //       searchResults: state.songs.filter((song) =>
+  //         song.title.includes(action.payload)
+  //       ),
+  //     };
 
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value, isSubmitted: false });
@@ -18,11 +25,19 @@ class SearchInput extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    //class function instead of action for store
     this.props.searchSong(this.state.searchTerm);
-    this.setState({ isSubmitted: true });
+    this.setState({ redirect: true });
   }
 
+  renderRedirect = () => {
+    if (this.state.redirect) {
+      return <SearchResults term={"testing search"} />;
+    }
+  };
+
   render() {
+    debugger;
     return (
       <div>
         <form onSubmit={this.handleSubmit.bind(this)}>
@@ -33,6 +48,7 @@ class SearchInput extends React.Component {
             name="searchTerm"
           ></input>
         </form>
+        {this.renderRedirect()}
       </div>
     );
   }
@@ -42,6 +58,4 @@ function mapStateToProps(state) {
   return { results: state.searchResults };
 }
 
-export default withRouter(
-  connect(mapStateToProps, { searchSong })(SearchInput)
-);
+export default withRouter(connect(mapStateToProps, { searchSong })(Search));

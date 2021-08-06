@@ -13,19 +13,21 @@ class Home extends React.Component {
   }
 
   render() {
-    const featuredSongs = this.props.songs.slice(0, 8).map((s) => {
-      return s;
-    });
+    const featuredSongs =
+      this.props.songs &&
+      this.props.songs.slice(0, 8).map((s) => {
+        return s;
+      });
 
     let mixes = [];
-    mixes = this.props.songs.filter((song) =>
-      song.categories.includes("dj-set")
-    );
+    mixes =
+      this.props.songs &&
+      this.props.songs.filter((song) => song.categories.includes("dj-set"));
 
     let songs = [];
-    songs = this.props.songs.filter(
-      (song) => !song.categories.includes("dj-set")
-    );
+    songs =
+      this.props.songs &&
+      this.props.songs.filter((song) => !song.categories.includes("dj-set"));
 
     return (
       <div>

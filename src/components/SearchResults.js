@@ -3,7 +3,7 @@ import React from "react";
 const SearchResults = (props) => {
   return (
     <div>
-      Search Results page
+      Search Results page testingggg
       {/* <h2>Search results for "{props.location.searchTerm}"</h2>
       {props.location.results.length > 0 ? (
         props.location.results.map((result) => result.title)
