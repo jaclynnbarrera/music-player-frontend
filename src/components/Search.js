@@ -3,6 +3,7 @@ import searchSong from "../actions/searchSong";
 import { connect } from "react-redux";
 import { withRouter } from "react-router";
 import SearchResults from "./SearchResults";
+import { Route, Redirect } from "react-router-dom";
 
 class Search extends React.Component {
   constructor() {
@@ -32,12 +33,11 @@ class Search extends React.Component {
 
   renderRedirect = () => {
     if (this.state.redirect) {
-      return <SearchResults term={"testing search"} />;
+      return <Redirect to="/search" />;
     }
   };
 
   render() {
-    debugger;
     return (
       <div>
         <form onSubmit={this.handleSubmit.bind(this)}>
@@ -49,6 +49,9 @@ class Search extends React.Component {
           ></input>
         </form>
         {this.renderRedirect()}
+        <Route exact path="/search">
+          <SearchResults term={"testingggg"} />
+        </Route>
       </div>
     );
   }

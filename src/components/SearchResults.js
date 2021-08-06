@@ -1,6 +1,7 @@
 import React from "react";
 
 const SearchResults = (props) => {
+  debugger;
   return (
     <div>
       Search Results page testingggg
