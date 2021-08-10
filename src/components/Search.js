@@ -19,7 +19,6 @@ class Search extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    //class function instead of action for store
     this.props.searchSong(this.state.searchTerm);
     this.setState({ redirect: true });
   }
@@ -30,7 +29,7 @@ class Search extends React.Component {
         <Redirect
           to={{
             pathname: "/search",
-            state: { term: this.state.searchTerm },
+            state: { term: this.state.searchTerm, results: this.props.results },
           }}
         />
       );
