@@ -197,14 +197,26 @@ a:link {
   padding-bottom: 50px;
 }
 
-/* SUBMITASONG */
-/* .submit-form {
-  padding: 50px;
-  text-align: center;
-  background-color: black;
-  color: white;
-  border: 1px solid black;
-} */
+.search {
+  border-top: 1px black solid;
+  padding: 7px;
+  display: flex;
+}
+
+.search h3 {
+  padding: 7px;
+}
+
+.search img {
+  max-height: 100px;
+}
+
+.search img:hover {
+  width: 30%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
 
 /* FOOTER */
 .footer-container {
