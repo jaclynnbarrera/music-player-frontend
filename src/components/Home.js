@@ -6,6 +6,7 @@ import Songs from "./Songs";
 import Song from "./Song";
 import Mixes from "./Mixes";
 import { Route } from "react-router-dom";
+import SearchResults from "./SearchResults";
 
 class Home extends React.Component {
   componentDidMount() {
@@ -40,6 +41,12 @@ class Home extends React.Component {
         <Route exact path="/songs">
           <Songs songs={songs} />
         </Route>
+
+        <Route
+          exact
+          path="/search"
+          render={(props) => <SearchResults {...props} />}
+        ></Route>
 
         <Route exact path="/mixes">
           <Mixes mixes={mixes} />

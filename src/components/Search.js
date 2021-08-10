@@ -2,8 +2,7 @@ import React from "react";
 import searchSong from "../actions/searchSong";
 import { connect } from "react-redux";
 import { withRouter } from "react-router";
-import SearchResults from "./SearchResults";
-import { Route, Redirect } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 
 class Search extends React.Component {
   constructor() {
@@ -13,12 +12,6 @@ class Search extends React.Component {
       redirect: false,
     };
   }
-
-  // return {
-  //       searchResults: state.songs.filter((song) =>
-  //         song.title.includes(action.payload)
-  //       ),
-  //     };
 
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value, isSubmitted: false });
@@ -33,7 +26,14 @@ class Search extends React.Component {
 
   renderRedirect = () => {
     if (this.state.redirect) {
-      return <Redirect to="/search" />;
+      return (
+        <Redirect
+          to={{
+            pathname: "/search",
+            state: { term: this.state.searchTerm },
+          }}
+        />
+      );
     }
   };
 
@@ -49,9 +49,6 @@ class Search extends React.Component {
           ></input>
         </form>
         {this.renderRedirect()}
-        <Route exact path="/search">
-          <SearchResults term={"testingggg"} />
-        </Route>
       </div>
     );
   }
