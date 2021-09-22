@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import React from "react";
+import search from "../images/search.png";
 
 export default function NavBar() {
   return (
@@ -19,7 +20,9 @@ export default function NavBar() {
           </div>
           <div className="mixes-nav">
             {" "}
-            <Link to="/search">SEARCH</Link>
+            <Link to="/search">
+              SEARCH <img src={search} alt="search" />
+            </Link>
           </div>
         </div>
       </div>
