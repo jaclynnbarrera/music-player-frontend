@@ -3,6 +3,7 @@ import searchSong from "../actions/searchSong";
 import { connect } from "react-redux";
 import { withRouter } from "react-router";
 import { Redirect } from "react-router-dom";
+import SearchResults from "./SearchResults";
 
 class Search extends React.Component {
   constructor() {
@@ -28,7 +29,7 @@ class Search extends React.Component {
       return (
         <Redirect
           to={{
-            pathname: "/search",
+            pathname: "/searchresults",
             state: { term: this.state.searchTerm, results: this.props.results },
           }}
         />
@@ -37,6 +38,7 @@ class Search extends React.Component {
   };
 
   render() {
+    debugger;
     return (
       <div className="search-bar">
         <h1>Search</h1>

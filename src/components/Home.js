@@ -7,6 +7,7 @@ import Song from "./Song";
 import Mixes from "./Mixes";
 import { Route } from "react-router-dom";
 import Search from "./Search";
+import SearchResults from "./SearchResults";
 
 class Home extends React.Component {
   componentDidMount() {
@@ -41,15 +42,15 @@ class Home extends React.Component {
         <Route exact path="/songs">
           <Songs songs={songs} />
         </Route>
-        {/* 
+
         <Route
           exact
-          path="/search"
+          path="/searchresults"
           render={(props) => <SearchResults {...props} />}
-        ></Route> */}
+        ></Route>
 
         <Route exact path="/search">
-          <Search />
+          <Search songs={this.props.songs} />
         </Route>
 
         <Route exact path="/mixes">

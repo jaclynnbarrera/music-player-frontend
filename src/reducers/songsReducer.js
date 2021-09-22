@@ -17,11 +17,13 @@ export default function songsReducer(
       return { ...state, songs: songs };
     case "SEARCH":
       return {
-        searchResults: state.songs.filter(
-          (song) =>
-            song.title.includes(action.payload) ||
-            song.artist.includes(action.payload)
-        ),
+        searchResults:
+          state.songs &&
+          state.songs.filter(
+            (song) =>
+              song.title.includes(action.payload) ||
+              song.artist.includes(action.payload)
+          ),
       };
     default:
       return state;
