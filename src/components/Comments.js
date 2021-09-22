@@ -1,11 +1,6 @@
 import React from "react";
 
 const Comments = (props) => {
-  console.log("comments");
-
-  // const date = props.comments[1]["created_at"].split("-")[2].split("T")[0];
-  // const month = props.comments[1]["created_at"].split("-")[1];
-  // const year = props.comments[1]["created_at"].split("-")[1];
   return (
     <div>
       <p>

@@ -1,4 +1,3 @@
-// import {Link} from 'react-router-dom'
 import React from "react";
 
 export default function Footer() {
@@ -9,9 +8,13 @@ export default function Footer() {
     <div className="footer-container">
       <p>
         how are you today? | it is {today.toDateString()} | the time is{" "}
-        {today.getHours()}:{today.getMinutes()} | radio 135 is an online
-        independent radio station where you can discover curated songs and
-        curated mixes {":)"}
+        {today.toLocaleString("en-US", {
+          hour: "numeric",
+          minute: "numeric",
+          hour12: true,
+        })}{" "}
+        | radio 135 is an online independent radio station where you can
+        discover curated songs and mixes {":)"}
       </p>
     </div>
   );
