@@ -5,7 +5,6 @@ export default function NavBar() {
   return (
     <div>
       <div>
-        <h4 className="headline">RADIO 135 RADIO 135 RADIO 135 RADIO 135</h4>
         <div className="navbar-container">
           <div className="home">
             <Link to="/">HOME</Link>
@@ -17,6 +16,10 @@ export default function NavBar() {
           <div className="mixes-nav">
             {" "}
             <Link to="/mixes">MIXES</Link>
+          </div>
+          <div className="mixes-nav">
+            {" "}
+            <Link to="/search">SEARCH</Link>
           </div>
         </div>
       </div>

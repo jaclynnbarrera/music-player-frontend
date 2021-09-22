@@ -2,7 +2,7 @@
 import "./App.css";
 import React from "react";
 import NavBar from "./components/NavBar";
-import Footer from "./components/Footer";
+import Footer from "./components/Scroll";
 import Home from "./components/Home";
 
 class App extends React.Component {
@@ -11,7 +11,9 @@ class App extends React.Component {
 
     return (
       <div className="App">
+        <h4 className="headline">RADIO 135</h4>
         <NavBar />
+        <Footer />
         <Home />
         <Footer />
       </div>

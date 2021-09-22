@@ -6,7 +6,7 @@ class Songs extends React.Component {
   render() {
     return (
       <div>
-        <Search songs={this.props.songs} />
+        {/* <Search songs={this.props.songs} /> */}
         <div className="songs">
           {this.props.songs &&
             this.props.songs.map((song) => (

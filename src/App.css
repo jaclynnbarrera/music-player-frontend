@@ -26,10 +26,10 @@ a:link {
 
 .headline {
   font-size: 50px;
-  text-align: center;
+  text-align: left;
   margin-top: 10px;
   margin-bottom: 0px;
-  animation: animate 30s linear infinite;
+  /* animation: animate 30s linear infinite; */
 }
 
 @keyframes animate {
@@ -218,16 +218,14 @@ a:link {
   -webkit-filter: grayscale(100%);
 }
 
-/* FOOTER */
 .footer-container {
-  border-top: 2px solid black;
   border-bottom: 2px solid black;
   display: flex;
 }
 
 .footer-container p {
-  margin: 1%;
   animation: animate 30s linear infinite;
+  margin: 7px;
 }
 
 @keyframes App-logo-spin {

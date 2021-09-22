@@ -14,7 +14,7 @@ export default function Footer() {
           hour12: true,
         })}{" "}
         | radio 135 is an online independent radio station where you can
-        discover curated songs and mixes {":)"}
+        discover curated songs and mixes
       </p>
     </div>
   );
