@@ -38,10 +38,12 @@ class Search extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="search-bar">
+        <h1>Search</h1>
         <form onSubmit={this.handleSubmit.bind(this)}>
           <input
             type="text"
+            placeholder="Search by song or artist"
             onChange={this.handleChange.bind(this)}
             value={this.state.searchTerm}
             name="searchTerm"
