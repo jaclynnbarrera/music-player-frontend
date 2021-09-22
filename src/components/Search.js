@@ -1,44 +1,35 @@
 import React from "react";
-import searchSong from "../actions/searchSong";
-import { connect } from "react-redux";
-import { withRouter } from "react-router";
-import { Redirect } from "react-router-dom";
-import SearchResults from "./SearchResults";
+import Songs from "./Songs";
 
 class Search extends React.Component {
   constructor() {
     super();
     this.state = {
       searchTerm: "",
-      redirect: false,
+      isSubmitted: false,
+      results: [],
     };
   }
 
   handleChange(e) {
-    this.setState({ [e.target.name]: e.target.value, isSubmitted: false });
+    this.setState({
+      [e.target.name]: e.target.value,
+      isSubmitted: false,
+      results: [],
+    });
   }
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.searchSong(this.state.searchTerm);
-    this.setState({ redirect: true });
+    let results = this.props.songs.filter(
+      (song) =>
+        song.title.includes(this.state.searchTerm) ||
+        song.artist.includes(this.state.searchTerm)
+    );
+    this.setState({ isSubmitted: true, results: results });
   }
 
-  renderRedirect = () => {
-    if (this.state.redirect) {
-      return (
-        <Redirect
-          to={{
-            pathname: "/searchresults",
-            state: { term: this.state.searchTerm, results: this.props.results },
-          }}
-        />
-      );
-    }
-  };
-
   render() {
-    debugger;
     return (
       <div className="search-bar">
         <h1>Search</h1>
@@ -51,14 +42,16 @@ class Search extends React.Component {
             name="searchTerm"
           ></input>
         </form>
-        {this.renderRedirect()}
+        <div className="search">
+          {this.state.isSubmitted ? (
+            <h1>Search Results for "{this.state.searchTerm}"</h1>
+          ) : null}
+
+          <Songs songs={this.state.results} />
+        </div>
       </div>
     );
   }
 }
 
-function mapStateToProps(state) {
-  return { results: state.searchResults };
-}
-
-export default withRouter(connect(mapStateToProps, { searchSong })(Search));
+export default Search;

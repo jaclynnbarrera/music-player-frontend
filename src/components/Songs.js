@@ -1,12 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Search from "./Search";
 
 class Songs extends React.Component {
   render() {
     return (
       <div>
-        {/* <Search songs={this.props.songs} /> */}
         <div className="songs">
           {this.props.songs &&
             this.props.songs.map((song) => (

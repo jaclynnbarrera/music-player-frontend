@@ -1,8 +1,4 @@
-export default function songsReducer(
-  state = { songs: [], searchResults: [] },
-  action
-) {
-  console.log("in songs reducer");
+export default function songsReducer(state = { songs: [] }, action) {
   switch (action.type) {
     case "FETCH_SONGS":
       return { songs: action.payload };
@@ -15,16 +11,6 @@ export default function songsReducer(
         }
       });
       return { ...state, songs: songs };
-    case "SEARCH":
-      return {
-        searchResults:
-          state.songs &&
-          state.songs.filter(
-            (song) =>
-              song.title.includes(action.payload) ||
-              song.artist.includes(action.payload)
-          ),
-      };
     default:
       return state;
   }
