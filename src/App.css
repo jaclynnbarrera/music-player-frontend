@@ -228,12 +228,12 @@ input[type="text"] {
   display: inline-block;
 }
 
-.footer-container {
+.scroll-container {
   border-bottom: 2px solid black;
   display: flex;
 }
 
-.footer-container p {
+.scroll-container p {
   animation: animate 30s linear infinite;
   margin: 7px;
 }

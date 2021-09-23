@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function Footer() {
+export default function Scroll() {
   const date = Date.now();
   const today = new Date(date);
 
   return (
-    <div className="footer-container">
+    <div className="scroll-container">
       <p>
         how are you today? | it is {today.toDateString()} | the time is{" "}
         {today.toLocaleString("en-US", {

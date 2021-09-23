@@ -34,7 +34,9 @@ class Home extends React.Component {
       <div>
         <Route exact path="/">
           <DailyPickContainer song={this.props.songs} />
-          <h3 id="featured">FEATURED</h3>
+          <div id="featured">
+            <h3>FEATURED</h3>
+          </div>
           <Songs songs={featuredSongs} />
         </Route>
 

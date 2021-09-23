@@ -2,9 +2,10 @@
 import "./App.css";
 import React from "react";
 import NavBar from "./components/NavBar";
-import Footer from "./components/Scroll";
+import Scroll from "./components/Scroll";
 import Home from "./components/Home";
 import sketch from "./images/sketch.png";
+import Footer from "./components/Footer";
 
 class App extends React.Component {
   render() {
@@ -16,8 +17,9 @@ class App extends React.Component {
           RADIO 135 <img src={sketch} alt="sketch" />
         </h4>
         <NavBar />
-        <Footer />
+        <Scroll />
         <Home />
+        <Footer />
       </div>
     );
   }
