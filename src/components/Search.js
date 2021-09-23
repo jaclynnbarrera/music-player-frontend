@@ -23,8 +23,10 @@ class Search extends React.Component {
     e.preventDefault();
     let results = this.props.songs.filter(
       (song) =>
-        song.title.includes(this.state.searchTerm) ||
-        song.artist.includes(this.state.searchTerm)
+        song.title
+          .toLowerCase()
+          .includes(this.state.searchTerm.toLowerCase()) ||
+        song.artist.toLowerCase().includes(this.state.searchTerm.toLowerCase())
     );
     this.setState({ isSubmitted: true, results: results });
   }
