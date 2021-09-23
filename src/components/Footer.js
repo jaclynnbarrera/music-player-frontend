@@ -4,13 +4,22 @@ const Footer = (props) => (
   <div className="footer">
     <img src={props.img} alt="sketch" />
     <div>
-      <p>built by jaclynnbarr</p>
+      <a href="https://www.twitter.com/jaclynnbarr" target="_blank">
+        built by jaclynnbarr
+      </a>
     </div>
     <div>
-      <p>repo</p>
+      <a
+        href="https://github.com/jaclynnbarrera/music-player-frontend"
+        target="_blank"
+      >
+        repo
+      </a>
     </div>
     <div>
-      <p>email</p>
+      <a href="mailto: jaclynnbarrera@gmail.com" target="_blank">
+        email
+      </a>
     </div>
   </div>
 );
