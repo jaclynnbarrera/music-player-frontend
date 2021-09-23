@@ -9,8 +9,6 @@ import Footer from "./components/Footer";
 
 class App extends React.Component {
   render() {
-    console.log("App render");
-
     return (
       <div className="App">
         <h4 className="headline">
@@ -19,7 +17,7 @@ class App extends React.Component {
         <NavBar />
         <Scroll />
         <Home />
-        <Footer />
+        <Footer img={sketch} />
       </div>
     );
   }

@@ -1,7 +1,6 @@
 import React from "react";
 
 const VideoEmbed = (props) => {
-  console.log("video");
   return (
     <div className={"video" + (props.song ? "song" : "HP")}>
       <iframe

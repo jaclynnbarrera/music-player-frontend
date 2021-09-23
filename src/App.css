@@ -29,7 +29,6 @@ a:link {
   text-align: left;
   margin-top: 10px;
   margin-bottom: 0px;
-  /* animation: animate 30s linear infinite; */
 }
 
 @keyframes animate {
@@ -236,6 +235,20 @@ input[type="text"] {
 .scroll-container p {
   animation: animate 30s linear infinite;
   margin: 7px;
+}
+
+.footer {
+  border-top: 2px solid black;
+  padding-top: 2%;
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 20px;
+}
+
+.footer img {
+  max-height: 50px;
 }
 
 @keyframes App-logo-spin {
