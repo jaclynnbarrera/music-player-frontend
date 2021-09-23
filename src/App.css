@@ -223,6 +223,11 @@ input[type="text"] {
   border-radius: 10px;
 }
 
+.headline img {
+  max-height: 40px;
+  display: inline-block;
+}
+
 .footer-container {
   border-bottom: 2px solid black;
   display: flex;
