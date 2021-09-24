@@ -1,7 +1,9 @@
 import React from "react";
+import logo from "../images/logo.png";
 
-const Footer = (props) => (
+const Footer = () => (
   <div className="footer">
+    <img src={logo} alt="logo" />
     <div>
       <a href="https://www.twitter.com/jaclynnbarr" target="_blank">
         built by jaclynnbarr
