@@ -81,9 +81,10 @@ a:link {
 }
 
 .song {
+  display: flex;
+  flex-direction: column;
   border: 2px solid black;
   text-transform: uppercase;
-  padding-bottom: 15px;
 }
 
 .song p {
@@ -105,12 +106,6 @@ a:link {
   padding: 15px;
 }
 
-.info-comments {
-  flex-direction: column;
-  display: flex;
-  flex-grow: 1;
-}
-
 .single-image {
   max-width: 400px;
   padding-bottom: 10px;
@@ -121,22 +116,29 @@ a:link {
   height: 50%;
 }
 
-.info-comments > * {
-  text-align: left;
-  padding: 5px;
+.comments {
+  border: 2px dotted black;
+  padding: 2%;
+  margin: 5%;
 }
 
-#genres {
+.info {
+  margin: 5%;
+}
+
+.genres {
   display: flex;
-  align-items: left;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
 }
 
-#genres p {
+.genres p {
   border: 1px solid black;
-  border-radius: 1px;
-  padding: 2px;
-  margin: 2px;
+  display: inline-block;
+  width: auto;
+  margin: 5px;
+  padding: 1%;
+  font-size: 12px;
 }
 
 .home-page {
@@ -198,7 +200,6 @@ a:link {
 }
 
 .search {
-  border-top: 1px black solid;
   padding: 7px;
   display: flex;
 }
@@ -250,13 +251,4 @@ input[type="text"] {
 
 .footer img {
   max-height: 50px;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

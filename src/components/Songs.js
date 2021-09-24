@@ -15,6 +15,9 @@ class Songs extends React.Component {
                 <p>
                   {song.title} - {song.artist}
                 </p>
+                <div className="genres">
+                  {song && song.categories.map((c, i) => <p key={i}>{c}</p>)}
+                </div>
               </div>
             ))}
         </div>

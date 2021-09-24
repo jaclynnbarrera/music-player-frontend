@@ -26,11 +26,11 @@ const Song = (props) => {
             <br></br>
             {song && song.artist.toUpperCase()}
           </h1>
+          <p id="genres">{song && song.artist_about}</p>
         </div>
-        <div id="genres">
+        <div className="genres">
           {song && song.categories.map((c, i) => <p key={i}>{c}</p>)}
         </div>
-        <p>{song && song.artist_about}</p>
         <div className="comments">
           {song && <CommentsContainer song={song} />}
         </div>
