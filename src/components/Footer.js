@@ -2,7 +2,6 @@ import React from "react";
 
 const Footer = (props) => (
   <div className="footer">
-    <img src={props.img} alt="sketch" />
     <div>
       <a href="https://www.twitter.com/jaclynnbarr" target="_blank">
         built by jaclynnbarr
