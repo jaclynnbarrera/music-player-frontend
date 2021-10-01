@@ -58,26 +58,28 @@ a:link {
   color: white;
 }
 
+.daily-pick-container {
+  margin: 2%;
+}
+
 #featured {
   text-align: left;
-  padding: 7px;
   font-size: 2vw;
 }
 
-.videoHP {
-  position: relative;
+.video-responsive {
   overflow: hidden;
-  padding: 15px;
-  object-fit: fill;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
 }
 
-.videosong {
-  width: 600px;
-  height: 600px;
-  position: relative;
-  overflow: hidden;
-  padding: 15px;
-  object-fit: fill;
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 .song {
@@ -101,9 +103,17 @@ a:link {
 }
 
 .media {
-  flex: 0 0 150px;
+  /* flex: 0 0 150px;
   border-right: 1px solid black;
-  padding: 15px;
+  padding: 15px; */
+  flex: 1;
+  border-right: 1px solid black;
+  padding: 1rem;
+}
+
+.info-comments {
+  flex: 1;
+  padding: 1rem;
 }
 
 .single-image {
