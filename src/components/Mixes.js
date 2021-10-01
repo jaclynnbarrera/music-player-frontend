@@ -13,6 +13,9 @@ const Mixes = (props) => {
             <p>
               {mix.title} - {mix.artist}
             </p>
+            <div className="genres">
+              {mix && mix.categories.map((c, i) => <p key={i}>{c}</p>)}
+            </div>
           </div>
         ))}
       </div>
