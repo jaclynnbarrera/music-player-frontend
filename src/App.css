@@ -96,6 +96,7 @@ a:link {
   text-overflow: ellipsis;
 }
 
+/* //this is the song split */
 .song-flex {
   display: flex;
   align-items: stretch;
@@ -103,9 +104,6 @@ a:link {
 }
 
 .media {
-  /* flex: 0 0 150px;
-  border-right: 1px solid black;
-  padding: 15px; */
   flex: 1;
   border-right: 1px solid black;
   padding: 1rem;
@@ -206,26 +204,6 @@ a:link {
   line-height: 20px;
   margin-bottom: 5px;
   padding-bottom: 50px;
-}
-
-.search {
-  padding: 7px;
-  display: flex;
-}
-
-.search h3 {
-  padding: 7px;
-}
-
-.search img {
-  max-height: 100px;
-}
-
-.search img:hover {
-  width: 30%;
-  object-fit: cover;
-  filter: grayscale(100%);
-  -webkit-filter: grayscale(100%);
 }
 
 input[type="text"] {

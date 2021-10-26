@@ -2,8 +2,6 @@ import React from "react";
 
 const VideoEmbed = (props) => {
   return (
-    //optionally assigning class name pages
-    // <div className={"video" + (props.song ? "song" : "HP")}>
     <div className="video-responsive">
       <iframe
         width="500"

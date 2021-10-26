@@ -7,8 +7,11 @@ class DailyPickContainer extends React.Component {
       this.props.song &&
       this.props.song[Math.floor(Math.random() * this.props.song.length)];
     return (
-      <div className="daily-pick-container">
-        <FeatureSongVideo video={song && song.video_link} />
+      <div className="HERO">
+        <div className="daily-pick-container">
+          <FeatureSongVideo video={song && song.video_link} />
+        </div>
+        <div>something here</div>
       </div>
     );
   }

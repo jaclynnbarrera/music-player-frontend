@@ -45,11 +45,14 @@ class Search extends React.Component {
           ></input>
         </form>
         <div className="search">
-          {this.state.isSubmitted ? (
-            <h1>Search Results for "{this.state.searchTerm}"</h1>
-          ) : null}
-
-          <Songs songs={this.state.results} />
+          <div>
+            {this.state.isSubmitted ? (
+              <h1>Search Results for "{this.state.searchTerm}"</h1>
+            ) : null}
+          </div>
+          <div>
+            <Songs songs={this.state.results} search={"search"} />
+          </div>
         </div>
       </div>
     );
