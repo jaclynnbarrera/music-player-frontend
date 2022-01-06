@@ -3,16 +3,31 @@
   padding: 20px;
 }
 
-.song-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+// parent
+.songs-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-gap: 1rem;
 }
 
-.selection {
-  width: 32%;
-  padding-bottom: 32%; /* Same as width, sets height */
-  margin-bottom: 2%; /* (100-32*3)/2 */
-  position: relative;
-  background-color: blue;
+// cards
+.song-card {
+  background-color: green;
+  padding: 1rem;
+  height: 4rem;
+}
+
+/* Screen larger than 600px? 2 column */
+@media (min-width: 600px) {
+  .songs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Screen larger than 900px? 3 columns */
+@media (min-width: 900px) {
+  .songs-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }

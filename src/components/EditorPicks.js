@@ -4,16 +4,17 @@ import React from "react";
 const EditorPicks = () => {
   return (
     <section className="editor-picks-container">
-      <header>
-        <h1>EDITOR PICKS</h1>
-      </header>
-      <div className="song-grid">
-        <div class="selection"></div>
-        <div class="selection"></div>
-        <div class="selection"></div>
-        <div class="selection"></div>
-        <div class="selection"></div>
-        <div class="selection"></div>
+      <h1>EDITOR PICKS</h1>
+      <div className="songs-grid">
+        <div className="song-card">ONE</div>
+        <div className="song-card">TWO</div>
+        <div className="song-card">THREE</div>
+        <div className="song-card">FOUR</div>
+        <div className="song-card">FIVE</div>
+        <div className="song-card">SIX</div>
+        <div className="song-card">SEVEN</div>
+        <div className="song-card">EIGHT</div>
+        <div className="song-card">NINE</div>
       </div>
     </section>
   );
