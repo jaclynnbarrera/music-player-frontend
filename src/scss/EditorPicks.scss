@@ -3,31 +3,33 @@
   padding: 20px;
 }
 
-// parent
 .songs-grid {
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1400px;
+  margin: 5px;
   display: grid;
   grid-gap: 1rem;
 }
 
-// cards
 .song-card {
   background-color: green;
   padding: 1rem;
   height: 10rem;
 }
 
-/* Screen larger than 600px? 2 column */
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .songs-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Screen larger than 900px? 3 columns */
-@media (min-width: 900px) {
+@media (min-width: 1024px) {
   .songs-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1190px) {
+  .songs-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
