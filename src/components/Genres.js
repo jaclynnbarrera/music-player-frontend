@@ -3,16 +3,20 @@ import React from "react";
 
 const Genres = () => {
   return (
-    <div className="genres-container">
-      <ul>
-        <li>Genre</li>
-        <li>Genre</li>
-        <li>Genre</li>
-        <li>Genre</li>
-        <li>Genre</li>
-        <li>Genre</li>
-      </ul>
-    </div>
+    <section class="genres-container">
+      <div>
+        <h1>Pick from your favorite genres or disover new ones.</h1>
+      </div>
+
+      <div class="genres-grid">
+        <div>genre</div>
+        <div>genre</div>
+        <div>genre</div>
+        <div>genre</div>
+        <div>genre</div>
+        <div>genre</div>
+      </div>
+    </section>
   );
 };
 

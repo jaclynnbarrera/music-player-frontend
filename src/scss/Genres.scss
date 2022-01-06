@@ -1,4 +1,19 @@
 .genres-container {
   border: 2px solid black;
   margin: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.genres-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-grid .col {
+  flex: 1;
+}
+
+.col {
+  padding: 20px;
 }
