@@ -1,23 +1,24 @@
-// import logo from './logo.svg';
-import "./App.css";
+import "./scss/App.scss"
 import React from "react";
 import NavBar from "./components/NavBar";
 import Scroll from "./components/Scroll";
-import Home from "./components/Home";
+import Main from "./components/Main";
 import Footer from "./components/Footer";
-import logo from "./images/logo.png";
 
 class App extends React.Component {
   render() {
     return (
-      <div className="App">
-        <h4 className="headline">
-          RADIO 135 <img src={logo} alt="logo" />
-        </h4>
-        <NavBar />
-        <Scroll />
-        <Home />
-        <Footer />
+      <div className="container">
+        <div class="item">
+          <NavBar />
+        </div>
+        <div class="item">
+          <Scroll />
+        </div>
+        <div class="item"><Main/></div>
+        <div class="item">
+          <Footer />
+        </div>
       </div>
     );
   }

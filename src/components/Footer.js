@@ -1,9 +1,10 @@
+import "../scss/Footer.scss";
 import React from "react";
 import logo from "../images/logo.png";
 
 const Footer = () => (
-  <div className="footer">
-    <img src={logo} alt="logo" />
+  <div className="footer-container">
+    LOGO
     <div>
       <a href="https://www.twitter.com/jaclynnbarr" target="_blank">
         built by jaclynnbarr

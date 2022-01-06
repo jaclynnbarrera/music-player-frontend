@@ -21,7 +21,6 @@ class CommentInput extends React.Component {
   }
 
   render() {
-    console.log("comment input");
     return (
       <div className="comment">
         <form onSubmit={this.handleSubmit.bind(this)}>

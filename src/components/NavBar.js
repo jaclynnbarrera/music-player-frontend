@@ -1,31 +1,29 @@
 import { Link } from "react-router-dom";
 import React from "react";
 import search from "../images/search.png";
+import logo from "../images/logo.png";
+import "../scss/NavBar.scss"
 
 export default function NavBar() {
   return (
-    <div>
-      <div>
-        <div className="navbar-container">
-          <div className="home">
-            <Link to="/">HOME</Link>
-          </div>
-          <div className="song-nav">
-            {" "}
-            <Link to="/songs">SONGS</Link>
-          </div>
-          <div className="mixes-nav">
-            {" "}
-            <Link to="/mixes">MIXES</Link>
-          </div>
-          <div className="mixes-nav">
-            {" "}
-            <Link to="/search">
-              SEARCH <img src={search} alt="search" />
-            </Link>
-          </div>
-        </div>
-      </div>
-    </div>
+    <nav>
+      <ul className="nav-container">
+        <li>LOGO</li>
+        <li>
+          <Link to="/">RADIO 135</Link>
+        </li>
+        <li>
+          <Link to="/songs">SONGS</Link>
+        </li>
+        <li>
+          <Link to="/mixes">MIXES</Link>
+        </li>
+        <li className="search">
+          <Link to="/search">
+            SEARCH <img src={search} alt="search-icon" />
+          </Link>
+        </li>
+      </ul>
+    </nav>
   );
 }
