@@ -1,4 +1,18 @@
-.editor-container {
+.editor-picks-container {
   border-top: 1px solid black;
   padding: 20px;
+}
+
+.song-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.selection {
+  width: 32%;
+  padding-bottom: 32%; /* Same as width, sets height */
+  margin-bottom: 2%; /* (100-32*3)/2 */
+  position: relative;
+  background-color: blue;
 }

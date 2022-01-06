@@ -1,11 +1,9 @@
 .nav-container {
-  border: solid black 2px;
+  border-bottom: solid black 1px;
   margin: 5px;
-
   display: flex;
   justify-content: space-between;
   list-style: none;
-  padding: 10px;
 }
 
 a {

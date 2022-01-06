@@ -3,9 +3,19 @@ import React from "react";
 
 const EditorPicks = () => {
   return (
-    <div className="editor-container">
-      <h1>Editor Picks</h1>
-    </div>
+    <section className="editor-picks-container">
+      <header>
+        <h1>EDITOR PICKS</h1>
+      </header>
+      <div className="song-grid">
+        <div class="selection"></div>
+        <div class="selection"></div>
+        <div class="selection"></div>
+        <div class="selection"></div>
+        <div class="selection"></div>
+        <div class="selection"></div>
+      </div>
+    </section>
   );
 };
 
