@@ -4,6 +4,10 @@
 
 Radio 135 is an online radio station/music player. Visitors can select from a collection of songs, listen, watch music videos and leave comments.
 
+See video demo [here](https://www.youtube.com/watch?v=69RPztsqZAs).
+
+![Screen Shot 2021-10-21 at 3 02 25 PM](https://user-images.githubusercontent.com/70356198/138340873-592b5b39-8e12-4b08-a902-c7d6cd42072a.png)
+
 ### Installation
 1. Fork and clone repo to your local machine. 
 2. Run `npm install` to install frontend dependencies.
