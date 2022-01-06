@@ -1,19 +1,43 @@
 .genres-container {
-  border: 2px solid black;
-  margin: 5px;
   display: flex;
-  justify-content: space-between;
+  flex-flow: row wrap;
+  border-top: 1px solid black;
 }
 
-.genres-grid {
+.genres-container > div {
+  margin: 20px;
+}
+
+.right-column {
+  border: 1px solid black;
+  flex: 2;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
   display: flex;
   flex-direction: column;
+  flex-basis: 100%;
 }
 
-.flex-grid .col {
-  flex: 1;
+.orange-column {
+  background-color: orange;
+  height: 100px;
 }
 
-.col {
-  padding: 20px;
+.blue-column {
+  background-color: blue;
+  height: 100px;
+}
+
+@media screen and (min-width: 800px) {
+  .column {
+    flex: 1;
+  }
 }
