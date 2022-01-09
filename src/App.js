@@ -1,10 +1,10 @@
 import "./scss/App.scss";
 import React from "react";
-import NavBar from "./components/NavBar";
-import Scroll from "./components/Scroll";
+import NavBar from "./components/Nav/NavBar";
+import Scroll from "./components/Nav/Scroll";
 import Main from "./components/Home/Home";
 import Songs from "./components/Latest";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 import { Route } from "react-router-dom";
 
 class App extends React.Component {

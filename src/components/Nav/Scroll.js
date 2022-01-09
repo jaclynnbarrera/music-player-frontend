@@ -1,5 +1,5 @@
 import React from "react";
-import "../scss/Scroll.scss"
+import "../scss/Scroll.scss";
 
 export default function Scroll() {
   const date = Date.now();
