@@ -3,7 +3,7 @@ import React from "react";
 import NavBar from "./components/NavBar";
 import Scroll from "./components/Scroll";
 import Main from "./components/Main";
-import Songs from "./components/Songs";
+import Songs from "./components/Latest";
 import Footer from "./components/Footer";
 import { Route } from "react-router-dom";
 
@@ -22,7 +22,7 @@ class App extends React.Component {
             <Main />
           </Route>
         </div>
-        <Route exact path="/songs">
+        <Route exact path="/latest">
           <Songs />
         </Route>
         <div class="item">

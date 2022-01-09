@@ -1,5 +1,6 @@
 import "../scss/Songs.scss";
 import React from "react";
+import SongCard from "./SongCard";
 import { Link } from "react-router-dom";
 
 class Songs extends React.Component {
@@ -27,17 +28,7 @@ class Songs extends React.Component {
         <p>The newest additions to the Radioo 135 archive, updated weekly.</p>
         <div className="songs-grid">
           {this.state.isLoaded &&
-            this.state.songs.map((song) => (
-              <article key={song.id} className="song-card">
-                <div className="img-container">
-                  <img src={song.image_link} alt={song.artist}></img>
-                </div>
-                <div className="card-body">
-                  <h3>{song.artist.toUpperCase()}</h3>
-                  <p>{song.title}</p>
-                </div>
-              </article>
-            ))}
+            this.state.songs.map((song) => <SongCard song={song} />)}
         </div>
       </section>
     );

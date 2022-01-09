@@ -1,26 +1,14 @@
 import "../scss/EditorPicks.scss";
 import React from "react";
+import SongCard from "./SongCard";
 
-const EditorPicks = () => {
+const EditorPicks = (props) => {
   return (
     <section className="editor-picks-container">
       <h1>EDITOR PICKS</h1>
+      <p>Hand selected picks of our favorite songs.</p>
       <div className="songs-grid">
-        <div className="song-card">
-          <div className="img-container">j</div>
-          <p>ONE</p>
-        </div>
-        <div className="song-card">TWO</div>
-        <div className="song-card">THREE</div>
-        <div className="song-card">FOUR</div>
-        <div className="song-card">FIVE</div>
-        <div className="song-card">SIX</div>
-        <div className="song-card">SEVEN</div>
-        <div className="song-card">EIGHT</div>
-        <div className="song-card">NINE</div>
-        <div className="song-card">TEN</div>
-        <div className="song-card">ELEVEN</div>
-        <div className="song-card">TWELVE</div>
+        {props.songs && props.songs.map((song) => <SongCard song={song} />)}
       </div>
     </section>
   );

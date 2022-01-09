@@ -8,8 +8,11 @@ class Hero extends React.Component {
       this.props.song &&
       this.props.song[Math.floor(Math.random() * this.props.song.length)];
     return (
+      // include link to watch song
       <div className="hero-container">
-        <VideoEmbed video_link={song && song.video_link} />
+        <img src={song.image_link} alt={song.artist} />
+        <p>{song.title}</p>
+        <p>{song.artist}</p>
       </div>
     );
   }

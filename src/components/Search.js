@@ -1,5 +1,5 @@
 import React from "react";
-import Songs from "./Songs";
+import Songs from "./Latest";
 
 class Search extends React.Component {
   constructor() {
