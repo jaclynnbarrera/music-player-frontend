@@ -36,11 +36,6 @@ class Songs extends React.Component {
                   <h3>{song.artist.toUpperCase()}</h3>
                   <p>{song.title}</p>
                 </div>
-                <div className="card-genres">
-                  {song.categories.map((genre, i) => (
-                    <li key={i}>{genre}</li>
-                  ))}
-                </div>
               </article>
             ))}
         </div>

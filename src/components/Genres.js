@@ -29,7 +29,9 @@ const Genres = () => {
         <div className="genres-grid">
           {genres.isLoaded &&
             genres.genres.map((item) => (
-              <div className="genre">{item.genre}</div>
+              <div className="genre" key={item.genre}>
+                {item.genre.toUpperCase()}
+              </div>
             ))}
         </div>
       </div>
