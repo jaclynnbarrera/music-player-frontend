@@ -6,9 +6,10 @@
   border-bottom: 1px solid black;
 }
 
-a {
-  text-decoration: none;
-  color: black;
+.nav-container a:hover,
+.nav-container a:active,
+.nav-container a.active {
+  font-weight: bold;
 }
 
 .scroll-container {

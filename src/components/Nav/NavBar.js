@@ -1,5 +1,5 @@
 import "./../../scss/NavBar.scss";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import React from "react";
 import search from "./../../images/search.png";
 
@@ -8,21 +8,25 @@ export default function NavBar() {
   const today = new Date(date);
 
   return (
-    <div>
+    <header>
       <nav>
         <ul className="nav-container">
           <li>LOGO</li>
           <li>
-            <Link to="/">RADIO 135</Link>
+            <NavLink activeClassName="active" to="/">
+              RADIO 135
+            </NavLink>
           </li>
           <li>
-            <Link to="/latest">LATEST</Link>
+            <NavLink activeClassName="active" to="/latest">
+              LATEST
+            </NavLink>
           </li>
 
           <li className="search">
-            <Link to="/explore">
+            <NavLink to="/explore">
               EXPLORE <img src={search} alt="search-icon" />
-            </Link>
+            </NavLink>
           </li>
         </ul>
       </nav>
@@ -38,6 +42,6 @@ export default function NavBar() {
           discover curated songs and mixes
         </p>
       </div>
-    </div>
+    </header>
   );
 }

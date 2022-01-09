@@ -1,17 +1,18 @@
 import React from "react";
-import CommentsContainer from "../containers/CommentsContainer";
-import VideoEmbed from "./VideoEmbed";
+// import CommentsContainer from "../containers/CommentsContainer";
+// import VideoEmbed from "./VideoEmbed";
 
 const Song = (props) => {
   console.log("song");
 
-  const song = props.songs.find(
-    (song) => song.id === parseInt(props.match.params.id)
-  );
+  // const song = props.songs.find(
+  //   (song) => song.id === parseInt(props.match.params.id)
+  // );
 
   return (
     <div className="song-flex">
-      <div className="media">
+      Song Details Page
+      {/* <div className="media">
         <img
           className="single-image"
           src={song && song.image_link}
@@ -34,7 +35,7 @@ const Song = (props) => {
         <div className="comments">
           {song && <CommentsContainer song={song} />}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
