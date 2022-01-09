@@ -27,14 +27,10 @@ const Genres = () => {
       </div>
       <div className="right-column">
         <div className="genres-grid">
-          <div className="genre">ONE</div>
-          <div className="genre">ONE</div>
-          <div className="genre">ONE</div>
-          <div className="genre">ONE</div>
-          <div className="genre">ONE</div>
-          <div className="genre">ONE</div>
-          <div className="genre">ONE</div>
-          <div className="genre">ONE</div>
+          {genres.isLoaded &&
+            genres.genres.map((item) => (
+              <div className="genre">{item.genre}</div>
+            ))}
         </div>
       </div>
     </section>
