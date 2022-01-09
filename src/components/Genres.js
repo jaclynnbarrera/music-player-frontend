@@ -21,19 +21,16 @@ const Genres = () => {
 
   return (
     <section class="genres-container">
-      <div className="left-column">
-        <h1>Explore Genres</h1>
-        <p>Browse music by your favorites genres or discover new favorites.</p>
-      </div>
-      <div className="right-column">
-        <div className="genres-grid">
-          {genres.isLoaded &&
-            genres.genres.map((item) => (
-              <div className="genre" key={item.genre}>
-                {item.genre.toUpperCase()}
-              </div>
-            ))}
-        </div>
+      <h1>EXPLORE GENRES</h1>
+      <p>Browse music by your favorites genres or discover new favorites.</p>
+
+      <div className="genres-grid">
+        {genres.isLoaded &&
+          genres.genres.map((item) => (
+            <div className="genre" key={item.genre}>
+              <p>{item.genre.toUpperCase()}</p>
+            </div>
+          ))}
       </div>
     </section>
   );
