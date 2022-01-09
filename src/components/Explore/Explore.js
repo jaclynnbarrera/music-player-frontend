@@ -1,5 +1,5 @@
 import React from "react";
-import Songs from "../components/Latest";
+// import Songs from "../components/Latest";
 
 class Search extends React.Component {
   constructor() {
@@ -51,7 +51,7 @@ class Search extends React.Component {
             ) : null}
           </div>
           <div>
-            <Songs songs={this.state.results} search={"search"} />
+            {/* <Songs songs={this.state.results} search={"search"} /> */}
           </div>
         </div>
       </div>

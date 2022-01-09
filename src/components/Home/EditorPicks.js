@@ -1,6 +1,6 @@
-import "../scss/EditorPicks.scss";
+import "./../../scss/EditorPicks.scss";
 import React from "react";
-import SongCard from "./SongCard";
+import SongCard from "../Song/SongCard";
 
 const EditorPicks = (props) => {
   return (

@@ -1,9 +1,9 @@
 import React from "react";
-import Hero from "../Hero";
+import Hero from "./Hero";
 import Genres from "./Genres";
-import EditorPicks from "../EditorPicks";
+import EditorPicks from "./EditorPicks";
 
-class Main extends React.Component {
+class Home extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -36,4 +36,4 @@ class Main extends React.Component {
   }
 }
 
-export default Main;
+export default Home;

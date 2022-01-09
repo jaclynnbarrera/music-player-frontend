@@ -1,4 +1,4 @@
-import "../scss/Genres.scss";
+import "./../../scss/Genres.scss";
 import React, { useState, useEffect } from "react";
 
 const Genres = () => {

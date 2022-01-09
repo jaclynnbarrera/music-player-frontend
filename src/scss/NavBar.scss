@@ -3,11 +3,16 @@
   display: flex;
   justify-content: space-between;
   list-style: none;
+  border-bottom: 1px solid black;
 }
 
 a {
   text-decoration: none;
   color: black;
+}
+
+.scroll-container {
+  border-bottom: 1px solid black;
 }
 
 // 768 for full navbar

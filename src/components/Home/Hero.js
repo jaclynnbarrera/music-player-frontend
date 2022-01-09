@@ -1,6 +1,6 @@
-import "../scss/Hero.scss";
+import "./../../scss/Hero.scss";
 import React from "react";
-import VideoEmbed from "./VideoEmbed";
+// import VideoEmbed from "./VideoEmbed";
 
 class Hero extends React.Component {
   render() {
