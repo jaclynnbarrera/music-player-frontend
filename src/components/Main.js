@@ -1,6 +1,5 @@
 import React from "react";
-import { connect } from "react-redux";
-import fetchSongs from "../actions/fetchSongs";
+// import fetchSongs from "../api/fetchSongs";
 import Hero from "./Hero";
 import Songs from "./Songs";
 import Song from "./Song";
@@ -11,14 +10,10 @@ import Genres from "./Genres";
 import EditorPicks from "./EditorPicks";
 
 class Main extends React.Component {
-  componentDidMount() {
-    this.props.fetchSongs();
-  }
-
   render() {
     const featuredSongs =
       this.props.songs &&
-      this.props.songs.slice(0, 8).map((s) => {
+      this.props.songs.slice(0, 12).map((s) => {
         return s;
       });
 
@@ -34,8 +29,10 @@ class Main extends React.Component {
 
     return (
       <div>
+        {/* if on home page render editor picks and genres */}
         <Hero song={this.props.songs} />
         <Genres />
+        {/* if on home page render editor picks and genres */}
         <EditorPicks />
         {/* <Route exact path="/">
           <div>
@@ -68,8 +65,4 @@ class Main extends React.Component {
   }
 }
 
-function mapStateToProps(state) {
-  return { songs: state.songs };
-}
-
-export default connect(mapStateToProps, { fetchSongs })(Main);
+export default Main;

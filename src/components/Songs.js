@@ -1,25 +1,50 @@
+import "../scss/Songs.scss";
 import React from "react";
 import { Link } from "react-router-dom";
 
 class Songs extends React.Component {
+  constructor() {
+    super();
+    this.state = {};
+  }
+
+  componentDidMount() {
+    fetch("https://calm-basin-04200.herokuapp.com/songs")
+      .then((res) => res.json())
+      .then((data) => {
+        this.setState({
+          isLoaded: true,
+          songs: data,
+        });
+      })
+      .catch((error) => console.log("error: ", error));
+  }
+
   render() {
     return (
-      <div className="songs">
-        {this.props.songs &&
-          this.props.songs.map((song) => (
-            <div key={song.id} className="song">
-              <Link to={`/songs/${song.id}`}>
-                <img src={song.image_link} alt="artist"></img>
-              </Link>
-              <p>
-                {song.title} - {song.artist}
-              </p>
-              <div className="genres">
-                {song && song.categories.map((c, i) => <p key={i}>{c}</p>)}
-              </div>
-            </div>
-          ))}
-      </div>
+      <section className="latest">
+        <h1>LATEST</h1>
+        <p>The newest additions to the Radioo 135 archive, updated weekly.</p>
+        <div className="songs-grid">
+          {this.state.isLoaded &&
+            this.state.songs.map((song) => (
+              <article key={song.id} className="song-card">
+                <div className="img-container">
+                  <img src={song.image_link} alt={song.artist}></img>
+                </div>
+                <div className="card-body">
+                  <h3>{song.artist.toUpperCase()}</h3>
+                  <p>{song.title}</p>
+                </div>
+                <div className="card-genres">
+                  {song.categories.map((genre, i) => (
+                    <li key={i}>{genre}</li>
+                  ))}
+                </div>
+              </article>
+            ))}
+        </div>
+      </section>
     );
   }
 }
