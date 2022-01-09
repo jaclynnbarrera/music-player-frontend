@@ -2,7 +2,7 @@ import "./scss/App.scss";
 import React from "react";
 import NavBar from "./components/NavBar";
 import Scroll from "./components/Scroll";
-import Main from "./components/Main";
+import Main from "./components/Home/Home";
 import Songs from "./components/Latest";
 import Footer from "./components/Footer";
 import { Route } from "react-router-dom";

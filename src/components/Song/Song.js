@@ -1,6 +1,6 @@
 import React from "react";
 import CommentsContainer from "../containers/CommentsContainer";
-import VideoEmbed from "./VideoEmbed";
+import VideoEmbed from "../VideoEmbed";
 
 const Song = (props) => {
   console.log("song");

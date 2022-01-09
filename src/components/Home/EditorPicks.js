@@ -8,7 +8,8 @@ const EditorPicks = (props) => {
       <h1>EDITOR PICKS</h1>
       <p>Hand selected picks of our favorite songs.</p>
       <div className="songs-grid">
-        {props.songs && props.songs.map((song) => <SongCard song={song} />)}
+        {props.songs &&
+          props.songs.map((song) => <SongCard key={song.id} song={song} />)}
       </div>
     </section>
   );

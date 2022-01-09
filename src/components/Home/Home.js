@@ -1,10 +1,7 @@
 import React from "react";
-import Hero from "./Hero";
-import Songs from "./Latest";
-import { Route } from "react-router-dom";
-import Search from "./Search";
+import Hero from "../Hero";
 import Genres from "./Genres";
-import EditorPicks from "./EditorPicks";
+import EditorPicks from "../EditorPicks";
 
 class Main extends React.Component {
   constructor() {
