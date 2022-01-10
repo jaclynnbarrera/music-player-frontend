@@ -13,7 +13,7 @@ const Genres = () => {
       .then((data) => {
         setGenres({
           isLoaded: true,
-          genres: data,
+          genres: data.slice(0, 8),
         });
       })
       .catch((error) => console.log("error: ", error));

@@ -26,7 +26,7 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        <Hero song={this.state.isLoaded && this.state.songs} />
+        <Hero song={this.state.isLoaded && this.state.songs[17]} />
         <Genres />
         <EditorPicks
           songs={this.state.isLoaded ? this.state.songs.slice(0, 12) : null}
