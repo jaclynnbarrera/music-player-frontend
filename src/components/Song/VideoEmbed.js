@@ -1,11 +1,12 @@
 import React from "react";
 
 const VideoEmbed = (props) => {
+  console.log(props.video_link);
   return (
-    <div className="video-responsive">
+    <div>
       <iframe
-        width="500"
-        height="500"
+        width="1000"
+        height="800"
         src={props.video_link}
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

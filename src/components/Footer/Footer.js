@@ -6,7 +6,11 @@ const Footer = () => (
     <ul className="footer-container">
       <li>LOGO</li>
       <li>
-        <a href="https://www.twitter.com/jaclynnbarr" target="_blank">
+        <a
+          href="https://www.twitter.com/jaclynnbarr"
+          target="_blank"
+          rel="noreferrer"
+        >
           built by jaclynnbarr
         </a>
       </li>
@@ -14,12 +18,17 @@ const Footer = () => (
         <a
           href="https://github.com/jaclynnbarrera/music-player-frontend"
           target="_blank"
+          rel="noreferrer"
         >
           repo
         </a>
       </li>
       <li>
-        <a href="mailto: jaclynnbarrera@gmail.com" target="_blank">
+        <a
+          href="mailto: jaclynnbarrera@gmail.com"
+          target="_blank"
+          rel="noreferrer"
+        >
           email
         </a>
       </li>

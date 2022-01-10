@@ -17,10 +17,10 @@ const Genres = () => {
         });
       })
       .catch((error) => console.log("error: ", error));
-  });
+  }, []);
 
   return (
-    <section class="genres-container">
+    <section className="genres-container">
       <h1>EXPLORE GENRES</h1>
       <p>Browse music by your favorites genres or discover new favorites.</p>
 

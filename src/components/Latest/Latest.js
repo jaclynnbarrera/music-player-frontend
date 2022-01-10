@@ -27,7 +27,9 @@ class Songs extends React.Component {
         <p>The newest additions to the Radioo 135 archive, updated weekly.</p>
         <div className="songs-grid">
           {this.state.isLoaded &&
-            this.state.songs.map((song) => <SongCard song={song} />)}
+            this.state.songs.map((song) => (
+              <SongCard song={song} key={song.id} />
+            ))}
         </div>
       </section>
     );
