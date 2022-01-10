@@ -12,7 +12,13 @@ const SongDetails = () => {
     data: {},
   });
 
+  const [commentAdded, setCommentAdded] = useState(false);
+  const updateComments = () => {
+    setCommentAdded(true);
+  };
+
   useEffect(() => {
+    setCommentAdded(false);
     fetch(`https://calm-basin-04200.herokuapp.com/songs/${params.songId}`)
       .then((res) => res.json())
       .then((data) => {
@@ -22,7 +28,7 @@ const SongDetails = () => {
         });
       })
       .catch((error) => console.log("error: ", error));
-  }, [params.songId]);
+  }, [params.songId, commentAdded]);
 
   return (
     <article className="song-detail-container">
@@ -49,9 +55,13 @@ const SongDetails = () => {
                 <li key={genre.id}>{genre.genre}</li>
               ))}
           </div>
-          {song.isLoaded && song.data.comments ? (
-            <Comments comments={song.data.comments} />
-          ) : null}
+          {song.isLoaded && (
+            <Comments
+              comments={song.data.comments}
+              songId={song.data.id}
+              func={updateComments}
+            />
+          )}
         </div>
       </div>
     </article>

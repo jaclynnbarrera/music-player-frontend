@@ -1,11 +1,13 @@
 import React from "react";
+import addComment from "../../api/addComment";
 // import addComment from "../api/addComment";
 
-class CommentInput extends React.Component {
-  constructor() {
-    super();
+class CommentForm extends React.Component {
+  constructor(props) {
+    super(props);
     this.state = {
       content: "",
+      songId: props.songId,
     };
   }
 
@@ -15,7 +17,8 @@ class CommentInput extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.addComment(this.state.content, this.props.song_id);
+    addComment(this.state.content, this.state.songId);
+    this.props.func();
     this.setState({ content: "" });
   }
 
@@ -25,6 +28,7 @@ class CommentInput extends React.Component {
         <form onSubmit={this.handleSubmit.bind(this)}>
           <input
             type="text"
+            placeholder="Add a comment"
             onChange={this.handleChange.bind(this)}
             value={this.state.content}
             name="content"
@@ -36,4 +40,4 @@ class CommentInput extends React.Component {
   }
 }
 
-export default connect(null, { addComment })(CommentInput);
+export default CommentForm;

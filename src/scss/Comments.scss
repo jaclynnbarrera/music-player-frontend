@@ -15,6 +15,18 @@
   border-top: 1px solid black;
 }
 
+.button:hover {
+  font-weight: bold;
+}
+
+.add-comment:hover {
+  font-weight: bold;
+}
+
+.add-comment {
+  cursor: pointer;
+}
+
 .comments li {
   list-style: none;
   padding: 0;
