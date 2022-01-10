@@ -1,13 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 // import CommentsContainer from "../containers/CommentsContainer";
 // import VideoEmbed from "./VideoEmbed";
 
-const Song = (props) => {
-  console.log("song");
+const SongDetails = () => {
+  const params = useParams();
 
-  // const song = props.songs.find(
-  //   (song) => song.id === parseInt(props.match.params.id)
-  // );
+  const [song, setSong] = useState({});
+
+  useEffect(() => {
+    fetch(`https://calm-basin-04200.herokuapp.com/songs/${params.songId}`)
+      .then((res) => res.json())
+      .then((data) => {
+        setSong(data);
+      })
+      .catch((error) => console.log("error: ", error));
+  }, []);
+
+  console.log(song);
 
   return (
     <div className="song-flex">
@@ -40,4 +50,4 @@ const Song = (props) => {
   );
 };
 
-export default Song;
+export default SongDetails;
