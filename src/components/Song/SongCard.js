@@ -11,10 +11,11 @@ function SongCard(props) {
         <div className="card-body">
           <h3>{props.song.artist.toUpperCase()}</h3>
           <p>{props.song.title}</p>
-          <p>
+
+          <div className="card-genres">
             {props.song.genres &&
               props.song.genres.map((g) => <li key={g.id}>{g.genre}</li>)}
-          </p>
+          </div>
         </div>
       </article>
     </Link>

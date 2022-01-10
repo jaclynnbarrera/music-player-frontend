@@ -1,5 +1,4 @@
 export default function addComment(content, songId) {
-  console.log("add comment action");
   return (dispatch) => {
     return fetch(
       `https://calm-basin-04200.herokuapp.com/songs/${songId}/comments`,

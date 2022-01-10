@@ -1,5 +1,5 @@
 import React from "react";
-import CommentInput from "./CommentInput";
+import CommentInput from "../Comment/CommentInput";
 import Comments from "./Comments";
 
 class CommentsContainer extends React.Component {

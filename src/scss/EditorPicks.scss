@@ -25,6 +25,17 @@
   object-fit: cover;
 }
 
+.card-genres {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+.card-genres li {
+  border: 1px solid black;
+  padding: 5px;
+}
+
 // .card-body {
 //   display: flex;
 //   flex-direction: column;
